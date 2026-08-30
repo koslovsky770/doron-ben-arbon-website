@@ -10,9 +10,7 @@ export function Footer() {
             for no contact form, so it holds the two conversion actions instead) */}
         <div>
           <Logo />
-          <p className="mt-5 max-w-[260px] text-sm leading-[1.6] text-ink-7">
-            תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. ליווי אישי עד קבלת המפתח.
-          </p>
+          <p className="mt-5 max-w-[260px] text-sm leading-[1.6] text-ink-7">{footer.blurb}</p>
           <div className="mt-6 flex flex-col gap-3">
             <a
               href={site.phoneHref}

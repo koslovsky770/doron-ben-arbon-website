@@ -296,6 +296,7 @@ export const ctaSection = {
 };
 
 export const footer = {
+  blurb: "תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. ליווי אישי עד קבלת המפתח.",
   columns: [
     {
       title: "ניווט",

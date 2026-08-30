@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>דורון בן ארבון — עריכת תוכן</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta name="description" content="תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. תשע שנות ניסיון, עשרות עסקאות, ליווי אישי עד קבלת המפתח." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { DEFAULT: "hsl(171 90% 38%)", light: "hsl(168 62% 51%)", dark: "hsl(172 92% 30%)" },
+        ink: {
+          1: "hsl(0 0% 100%)", 2: "hsl(0 0% 99%)", 4: "hsl(0 0% 94%)",
+          6: "hsl(60 1% 75%)", 7: "hsl(60 1% 55%)", 10: "hsl(60 3% 15%)",
+          11: "hsl(0 2% 12%)", 12: "hsl(30 5% 8%)", 13: "hsl(30 100% 0.4%)"
+        }
+      },
+      fontFamily: {
+        display: ["Polin", "Assistant", "Heebo", "system-ui", "sans-serif"],
+        sans: ["Polin", "Assistant", "Heebo", "system-ui", "sans-serif"]
+      },
+      fontSize: {
+        d1: ["clamp(2.5rem, 6.39vw, 5.75rem)", { lineHeight: "1" }],
+        d2: ["clamp(1.875rem, 4.1vw, 3.6875rem)", { lineHeight: "1.05" }],
+        d3: ["clamp(1.25rem, 1.67vw, 1.5rem)", { lineHeight: "1.2" }]
+      },
+      keyframes: {
+        "fade-up": { from: { opacity: "0", transform: "translateY(16px)" }, to: { opacity: "1", transform: "translateY(0)" } }
+      },
+      animation: { "fade-up": "fade-up .6s cubic-bezier(.16,1,.3,1) both" }
+    }
+  }
+};
+</script>
+<style>
+  /* Polin — brand face. Two cuts only, so weight ranges map every Tailwind
+     font-weight onto a real file and prevent a synthesised faux bold. */
+  @font-face {
+    font-family: "Polin";
+    src: url("../lovable/public/fonts/Polin-Regular.woff2") format("woff2"),
+         url("../lovable/public/fonts/Polin-Regular.woff") format("woff");
+    font-weight: 100 500; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: "Polin";
+    src: url("../lovable/public/fonts/Polin-Bold.woff2") format("woff2"),
+         url("../lovable/public/fonts/Polin-Bold.woff") format("woff");
+    font-weight: 600 900; font-style: normal; font-display: swap;
+  }
+  body { background: hsl(30 100% 0.4%); color: hsl(0 0% 94%); font-family: Polin, Assistant, system-ui, sans-serif; }
+  html { scroll-behavior: smooth; }
+  .ltr { direction: ltr; unicode-bidi: isolate; }
+  .btn-inner-brand { box-shadow: inset -3px 5px 4px 0 hsl(168 62% 51% / .9); }
+  .btn-inner-dark { box-shadow: inset -3px 5px 4px 0 hsl(0 0% 17%); }
+  .line-clamp-2-safe { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .no-bar { scrollbar-width: none; }
+  .no-bar::-webkit-scrollbar { display: none; }
+</style>
+</head>
+<body class="min-h-[100dvh] w-full overflow-x-clip bg-ink-13">
+
+<!-- ============ NAVBAR ============ -->
+<header id="hdr" class="sticky top-0 z-50 w-full border-b border-ink-10 bg-ink-13 transition-colors duration-300">
+  <nav class="mx-auto flex h-[84px] w-full max-w-[1440px] items-center justify-between px-4 sm:px-8 lg:h-[112px] lg:px-16">
+    <a href="#" class="group flex shrink-0 items-center gap-3" aria-label="דורון בן ארבון — תיווך מסחרי">
+      <svg viewBox="0 0 100 100" fill="none" class="h-11 w-11 lg:h-[56px] lg:w-[56px] shrink-0 text-brand transition-transform duration-300 group-hover:scale-105" role="img" aria-label="דורון">
+        <path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M29 57.5 L50 40 L71 57.5" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M35.5 55.5 V72 M64.5 55.5 V72" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+        <rect x="46.5" y="57" width="7" height="6" rx="1.5" fill="currentColor"/>
+        <rect x="46.5" y="65.5" width="7" height="6" rx="1.5" fill="currentColor"/>
+      </svg>
+      <span class="flex flex-col justify-center leading-none">
+        <span class="font-display text-[26px] lg:text-[34px] font-bold leading-none tracking-tight text-ink-2">דורון</span>
+        <span class="mt-1 text-[11px] lg:text-[13px] font-medium leading-none text-ink-7" data-edit="site.tagline" data-edit-label="הטאגליין (הדר)">מתווך בין נכסים לאנשים</span>
+      </span>
+    </a>
+
+    <ul class="hidden items-center gap-[18px] xl:flex xl:gap-[30px]">
+      <li><a href="#" aria-current="page" class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-6 py-4 text-base font-medium text-ink-4">דף בית</a></li>
+      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
+      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
+      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
+      <li><a href="#about" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">אודות</a></li>
+      <li><a href="#testimonials" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">המלצות</a></li>
+    </ul>
+
+    <div class="flex items-center gap-2">
+      <a href="tel:+972544980159" class="btn-inner-dark relative hidden items-center justify-center gap-2 rounded-lg bg-ink-11 px-6 py-4 text-base font-medium text-ink-4 transition-colors hover:bg-ink-10 sm:flex">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        צור קשר
+      </a>
+      <button id="menuBtn" type="button" aria-label="פתיחת התפריט" aria-expanded="false" class="flex h-11 w-11 items-center justify-center rounded-lg border border-ink-10 bg-ink-12 text-ink-4 xl:hidden">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div id="drawer" class="fixed inset-x-0 bottom-0 top-[84px] z-50 hidden overflow-y-auto border-t border-ink-10 bg-ink-13 px-4 pb-10 pt-6 xl:hidden">
+    <ul class="flex flex-col gap-2">
+      <li><a href="#" class="block rounded-lg border border-ink-10 bg-ink-12 px-5 py-4 text-lg font-medium text-ink-4">דף בית</a></li>
+      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">תיווך מסחרי</a></li>
+      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">שיווק פרויקטים</a></li>
+      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">מגרשים</a></li>
+      <li><a href="#about" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">אודות</a></li>
+      <li><a href="#testimonials" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">המלצות</a></li>
+    </ul>
+    <div class="mt-6 grid grid-cols-2 gap-3">
+      <a href="tel:+972544980159" class="btn-inner-brand relative flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white" data-edit="hero.primaryCta.label" data-edit-label="כפתור התקשרות (תפריט נייד)">התקשרו עכשיו</a>
+      <a href="#" data-wa class="btn-inner-dark relative flex items-center justify-center rounded-lg bg-ink-11 px-6 py-4 text-base font-medium text-ink-4" data-edit="hero.secondaryCta.label" data-edit-label="כפתור וואטסאפ (תפריט נייד)">וואטסאפ</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden bg-ink-13">
+  <svg data-spiro="31" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute right-[-25%] -top-[45%] h-[1400px] w-[1400px] text-brand/[0.07]"></svg>
+
+  <div class="relative h-[380px] w-full sm:h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-[49%]">
+    <img src="../lovable/public/images/hero.jpg" alt="בניין מסחרי מודרני עם חנויות בקומת הקרקע" class="h-full w-full object-cover object-center" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-13/40 via-transparent to-ink-13"></div>
+    <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-13 to-transparent lg:hidden"></div>
+
+    <figure class="absolute left-4 top-6 hidden w-[300px] animate-fade-up items-center gap-4 rounded-xl border border-white/10 bg-white/[0.08] p-4 backdrop-blur-md sm:flex sm:w-[330px] lg:left-[8%] lg:top-[9%]">
+      <div aria-hidden class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand font-display text-sm font-bold text-white">יב</div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-[2px]" data-stars="5"></div>
+        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white">100% אמינות, ליווי אישי ומקצועי</blockquote>
+        <figcaption class="mt-1.5 text-[11px] font-semibold text-white/70">יוסף בן פז <span class="font-normal">| מנכ״ל יגאל נכסים</span></figcaption>
+      </div>
+    </figure>
+
+    <figure class="absolute bottom-6 right-4 hidden w-[300px] animate-fade-up items-center gap-4 rounded-xl border border-white/10 bg-white/[0.08] p-4 backdrop-blur-md sm:flex sm:w-[330px] lg:bottom-auto lg:right-[3%] lg:top-[66%]">
+      <div aria-hidden class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand font-display text-sm font-bold text-white">שפ</div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-[2px]" data-stars="5"></div>
+        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white">הייתי פונה אליו לכל פרויקט בבני ברק</blockquote>
+        <figcaption class="mt-1.5 text-[11px] font-semibold text-white/70">שי פסל <span class="font-normal">| גרסטנפלד הנדסה ובניין</span></figcaption>
+      </div>
+    </figure>
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:px-16 lg:pb-[164px] lg:pt-[268px]">
+    <div class="max-w-[680px] animate-fade-up">
+      <h1 class="font-display text-d1 font-extrabold tracking-tight text-ink-2" data-edit="hero.title" data-edit-label="כותרת ראשית">מתווכים בין נכסים לאנשים</h1>
+      <p class="mt-6 max-w-[680px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="hero.paragraph" data-edit-label="פסקת פתיחה">דורון בן ארבון — תשע שנים של תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. בס״ד ביצענו עשרות עסקאות מכירה והשכרה של נכסים ותיווך עסקים, בליווי אישי מלא ובאמינות שלא מתפשרת.</p>
+      <div class="mt-9 flex flex-wrap items-center gap-4 sm:gap-8">
+        <a href="tel:+972544980159" class="btn-inner-brand relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-brand px-7 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-edit="hero.primaryCta.label" data-edit-label="כפתור התקשרות">התקשרו עכשיו</span>
+        </a>
+        <a href="#" data-wa class="btn-inner-dark relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-medium text-ink-4 transition-colors hover:bg-ink-10">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          <span data-edit="hero.secondaryCta.label" data-edit-label="כפתור וואטסאפ">וואטסאפ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="relative overflow-x-clip bg-brand">
+  <div class="absolute right-[2%] top-[8%] hidden h-[292px] w-[234px] overflow-hidden rounded-[18px] bg-brand shadow-2xl shadow-black/20 lg:block xl:right-[4%]" style="transform:rotate(9deg)">
+    <img src="../lovable/public/images/about-1.jpg" alt="דורון בן ארבון במשרד התיווך בבני ברק" class="h-full w-full object-cover object-center opacity-90 mix-blend-luminosity" />
+  </div>
+  <div class="absolute left-[2%] top-[26%] hidden h-[291px] w-[247px] overflow-hidden rounded-[18px] bg-brand shadow-2xl shadow-black/20 lg:block xl:left-[3%]" style="transform:rotate(-11deg)">
+    <img src="../lovable/public/images/about-2.jpg" alt="משרד התיווך של דורון בן ארבון" class="h-full w-full object-cover object-center opacity-90 mix-blend-luminosity" />
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-[1440px] px-4 py-20 text-center sm:px-8 lg:px-16 lg:py-[120px]">
+    <h2 class="mx-auto max-w-[920px] font-display text-d1 font-extrabold leading-[1.02] tracking-tight text-white">
+      <span data-edit="about.titleStart" data-edit-label="כותרת אודות — מילה 1">בונים</span><span aria-hidden class="mx-3 inline-block h-[0.42em] w-[1.3em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span><span data-edit="about.titleEnd" data-edit-label="כותרת אודות — מילה 2">אמון,</span><br /><span data-edit="about.titleSecondLine" data-edit-label="כותרת אודות — שורה שנייה">לא רק עסקאות.</span>
+    </h2>
+    <p class="mx-auto mt-7 max-w-[789px] text-[17px] leading-[1.6] text-white/85 sm:text-lg" data-edit="about.paragraph" data-edit-label="פסקת אודות">מתוך היכרות עם כל מטר רבוע בבני ברק, וביושר שלא מתפשר — נבטל עסקה בכל שלב אם משהו לא מרגיש נכון עבורכם. זו הסיבה שלקוחות חוזרים שוב ושוב גם לעסקאות הבאות.</p>
+    <a href="#" class="relative mt-9 inline-flex h-[56px] items-center justify-center rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5" data-edit="about.cta.label" data-edit-label="כפתור קצת עלינו">קצת עלינו…</a>
+
+    <dl class="mx-auto mt-12 flex max-w-[720px] flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
+      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.0.value" data-edit-label="מספר סטטיסטיקה 1">9</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.0.label" data-edit-label="תווית סטטיסטיקה 1">שנות ניסיון בבני ברק</dd></div>
+      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.1.value" data-edit-label="מספר סטטיסטיקה 2">עשרות</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.1.label" data-edit-label="תווית סטטיסטיקה 2">עסקאות מכירה והשכרה</dd></div>
+      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.2.value" data-edit-label="מספר סטטיסטיקה 3">מלא</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.2.label" data-edit-label="תווית סטטיסטיקה 3">ליווי עד קבלת המפתח</dd></div>
+    </dl>
+  </div>
+
+  <svg data-spiro="32" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute bottom-[-58%] left-1/2 h-[135vw] max-h-[910px] w-[135vw] max-w-[910px] -translate-x-1/2 text-brand-light/25 sm:bottom-[-62%]"></svg>
+</section>
+
+<!-- ============ FEATURED PROJECTS ============ -->
+<section id="projects" class="relative z-10 py-20 lg:py-[128px]">
+  <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
+    <div class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+      <div class="max-w-[796px]">
+        <div class="flex items-center gap-6">
+          <svg viewBox="0 0 40 40" fill="none" class="h-[38px] w-[38px] shrink-0 text-brand"><rect x="13" y="-1" width="13" height="42" rx="2.5" transform="rotate(27 19.5 20)" fill="currentColor"/></svg>
+          <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="projectsSection.title" data-edit-label="כותרת - פרויקטים נבחרים">פרויקטים נבחרים</h2>
+        </div>
+        <p class="mt-6 text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="projectsSection.paragraph" data-edit-label="פסקת פרויקטים נבחרים">חלק מהעסקאות שליווינו — חנויות, מחסנים, משרדים ובניינים שלמים. לכל נכס יש את הסיפור שלו, ולכל לקוח את ההתאמה הנכונה עבורו.</p>
+      </div>
+      <a href="#" class="btn-inner-dark relative flex h-[56px] shrink-0 items-center justify-center self-start rounded-lg bg-ink-12 px-6 text-base font-medium text-ink-4 transition-colors hover:bg-ink-11 lg:self-end" data-edit="projectsSection.cta.label" data-edit-label="כפתור לכל הפרויקטים">לכל הפרויקטים</a>
+    </div>
+
+    <div class="mt-10 overflow-x-auto pb-1 lg:mt-12">
+      <div id="tabs" role="tablist" aria-label="סינון פרויקטים לפי תחום" class="inline-flex gap-0 rounded-xl border border-ink-10 bg-ink-12 p-2"></div>
+    </div>
+
+    <div id="track" class="no-bar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 lg:mt-[72px]"></div>
+    <div id="empty" class="mt-10 hidden flex-col items-start gap-6 rounded-2xl border border-ink-10 bg-ink-12 p-8 sm:flex-row sm:items-center sm:justify-between lg:mt-[72px] lg:p-12">
+      <p class="max-w-[640px] text-[17px] leading-[1.6] text-ink-6" data-edit="projectsSection.emptyState" data-edit-label="הודעת אין עדיין תוכן (מגרשים)">עדיין לא העלינו לכאן עסקאות מקטגוריה זו. יש לנו מה לספר — דברו איתי ואשמח לעדכן במה שרלוונטי עבורכם.</p>
+      <a href="#" data-wa class="btn-inner-brand relative flex h-[56px] shrink-0 items-center justify-center rounded-lg bg-brand px-6 text-base font-bold text-white">דברו איתי</a>
+    </div>
+
+    <div id="pager" class="mt-8 flex items-center justify-between lg:mt-[32px]">
+      <span class="ltr text-base tabular-nums text-ink-4"><span id="pgNow">01</span><span class="text-ink-7">/<span id="pgAll">02</span></span></span>
+      <div class="flex gap-2.5">
+        <button id="prev" type="button" aria-label="הפרויקטים הקודמים" class="flex h-11 w-11 items-center justify-center rounded-lg border border-ink-10 bg-ink-12 text-ink-4 transition-colors hover:bg-ink-11">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m12 5 7 7-7 7"/><path d="M5 12h14"/></svg>
+        </button>
+        <button id="next" type="button" aria-label="הפרויקטים הבאים" class="flex h-11 w-11 items-center justify-center rounded-lg border border-ink-10 bg-ink-12 text-ink-4 transition-colors hover:bg-ink-11">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="relative z-10 py-20 lg:py-[88px]">
+  <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
+    <div class="mx-auto max-w-[1000px] text-center">
+      <div class="flex items-center justify-center gap-5">
+        <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="servicesSection.title" data-edit-label="כותרת - השירות שתקבלו">השירות שתקבלו</h2>
+        <svg viewBox="0 0 40 40" fill="none" class="h-[38px] w-[38px] shrink-0 text-brand"><g stroke="currentColor" stroke-width="5.5" stroke-linecap="round"><path d="M20 4 V36"/><path d="M6.1 12 L33.9 28"/><path d="M6.1 28 L33.9 12"/></g></svg>
+      </div>
+      <p class="mx-auto mt-6 max-w-[674px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="servicesSection.paragraph" data-edit-label="פסקת השירות שתקבלו">שלושה תחומי פעילות, גישה אחת: בקיאות חסרת פשרות בשטח, יושר לפני הכל, וליווי אישי עד לקבלת המפתח.</p>
+    </div>
+    <div id="services-grid" class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-[72px] lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ============ GOOGLE REVIEWS ============ -->
+<section id="reviews" class="relative z-10 py-20 lg:py-[88px]">
+  <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
+    <div class="mx-auto max-w-[1000px] text-center">
+      <div class="flex items-center justify-center gap-5">
+        <h2 class="font-display text-d2 font-bold tracking-tight text-ink-2" data-edit="googleReviewsSection.title" data-edit-label="כותרת - ביקורות גוגל">מה כתבו עלינו בגוגל</h2>
+        <svg viewBox="0 0 48 48" class="h-9 w-9 shrink-0" aria-hidden><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      </div>
+      <p class="mx-auto mt-6 max-w-[676px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="googleReviewsSection.paragraph" data-edit-label="פסקת ביקורות גוגל">כל הביקורות למטה נכתבו על ידי לקוחות אמיתיים בכרטיס העסקי של המשרד בגוגל.</p>
+
+      <div class="mt-8 inline-flex items-center gap-4 rounded-xl border border-ink-10 bg-ink-12 px-6 py-4">
+        <span class="ltr font-display text-[32px] font-bold leading-none text-ink-2">5.0</span>
+        <span class="h-8 w-px bg-ink-10" aria-hidden></span>
+        <span class="flex flex-col items-start gap-1.5">
+          <span class="flex items-center gap-[3px]" data-stars5="4"></span>
+          <span class="text-sm text-ink-7">23 ביקורות בגוגל</span>
+        </span>
+      </div>
+    </div>
+
+    <div id="revWrap" class="mt-12 lg:mt-16">
+      <div class="overflow-hidden" aria-live="polite">
+        <div id="revTrack" class="flex w-full transition-transform duration-500 ease-out"></div>
+      </div>
+
+      <div class="mt-8 flex items-center justify-between gap-6">
+        <a href="https://www.google.com/maps?cid=1215550842583894295" target="_blank" rel="noopener noreferrer" class="text-base text-ink-4 underline underline-offset-4 transition-colors hover:text-brand">לכל הביקורות בגוגל</a>
+        <div class="flex items-center gap-5">
+          <div id="revDots" class="flex items-center gap-2" role="tablist" aria-label="בחירת ביקורת"></div>
+          <div class="flex gap-2.5">
+            <button id="revPrev" type="button" aria-label="הביקורת הקודמת" class="flex h-11 w-11 items-center justify-center rounded-lg border border-ink-10 bg-ink-12 text-ink-4 transition-colors hover:bg-ink-11">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m12 5 7 7-7 7"/><path d="M5 12h14"/></svg>
+            </button>
+            <button id="revNext" type="button" aria-label="הביקורת הבאה" class="flex h-11 w-11 items-center justify-center rounded-lg border border-ink-10 bg-ink-12 text-ink-4 transition-colors hover:bg-ink-11">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSINESS TESTIMONIALS ============ -->
+<section id="testimonials" class="relative z-10 pb-20 lg:pb-[88px]">
+  <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h2 class="font-display text-[28px] font-bold leading-tight tracking-tight text-ink-2 sm:text-[34px]" data-edit="testimonialsSection.title" data-edit-label="כותרת - המלצות לקוחות עסקיים">ומה שכתבו לקוחות עסקיים</h2>
+      <p class="mx-auto mt-4 max-w-[600px] text-base leading-[1.6] text-ink-7" data-edit="testimonialsSection.paragraph" data-edit-label="פסקת המלצות לקוחות עסקיים">יזמים, חברות הנדסה ומשרדי נכסים שליווינו — מתוך הפרוספקט הרשמי.</p>
+    </div>
+    <div id="testi-grid" class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-12"></div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative z-10 px-4 py-10 sm:px-8 lg:px-12 lg:py-8">
+  <div class="relative mx-auto max-w-[1344px] overflow-hidden rounded-[24px] bg-brand px-6 py-16 text-center sm:px-12 lg:py-[88px]">
+    <svg data-spiro="26" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute -left-[18%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 text-white/25"></svg>
+    <svg data-spiro="26" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute -right-[18%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 text-white/25"></svg>
+    <div class="relative">
+      <h2 class="mx-auto max-w-[900px] font-display text-d1 font-extrabold leading-[1.05] tracking-tight text-white">
+        <span data-edit="ctaSection.titleStart" data-edit-label="כותרת CTA — מילים 1">בואו נמצא</span><span aria-hidden class="mx-3 inline-block h-[0.4em] w-[1.15em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span><span data-edit="ctaSection.titleEnd" data-edit-label="כותרת CTA — מילים 2">את הנכס</span><br /><span data-edit="ctaSection.titleSecondLine" data-edit-label="כותרת CTA — שורה שנייה">הבא שלכם</span>
+      </h2>
+      <a href="#" data-wa class="mt-10 inline-flex h-[56px] items-center justify-center gap-2.5 rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        <span data-edit="ctaSection.cta.label" data-edit-label="כפתור CTA תחתון">דברו איתי בוואטסאפ</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="relative z-10 border-t border-ink-10 bg-ink-13">
+  <div class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 px-4 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-[280px_1fr_1fr_1.2fr] lg:gap-10 lg:px-16 lg:py-[72px]">
+    <div>
+      <a href="#" class="group flex shrink-0 items-center gap-3">
+        <svg viewBox="0 0 100 100" fill="none" class="h-[34px] w-[34px] shrink-0 text-brand" aria-hidden>
+          <path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+          <path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M29 57.5 L50 40 L71 57.5" stroke="currentColor" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M35.5 55.5 V72 M64.5 55.5 V72" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+          <rect x="46.5" y="57" width="7" height="6" rx="1.5" fill="currentColor"/>
+          <rect x="46.5" y="65.5" width="7" height="6" rx="1.5" fill="currentColor"/>
+        </svg>
+        <span class="flex flex-col justify-center leading-none">
+          <span class="font-display text-[23px] font-bold leading-none tracking-tight text-ink-2">דורון</span>
+          <span class="mt-[3px] text-[10px] font-medium leading-none text-ink-7" data-edit="site.tagline" data-edit-label="הטאגליין (פוטר)">מתווך בין נכסים לאנשים</span>
+        </span>
+      </a>
+      <p class="mt-5 max-w-[260px] text-sm leading-[1.6] text-ink-7" data-edit="footer.blurb" data-edit-label="תיאור קצר בפוטר">תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. ליווי אישי עד קבלת המפתח.</p>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="tel:+972544980159" class="btn-inner-brand relative flex h-[52px] items-center justify-center gap-2.5 rounded-lg bg-brand px-6 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="ltr">054-4980159</span>
+        </a>
+        <a href="#" data-wa class="btn-inner-dark relative flex h-[52px] items-center justify-center gap-2.5 rounded-lg bg-ink-12 px-6 text-base font-medium text-ink-4 transition-colors hover:bg-ink-11">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          וואטסאפ
+        </a>
+      </div>
+    </div>
+
+    <nav aria-label="ניווט">
+      <h2 class="text-lg font-medium text-ink-7">ניווט</h2>
+      <ul class="mt-6 flex flex-col gap-4">
+        <li><a href="#" class="text-base text-ink-4 transition-colors hover:text-brand">דף בית</a></li>
+        <li><a href="#about" class="text-base text-ink-4 transition-colors hover:text-brand">אודות</a></li>
+        <li><a href="#projects" class="text-base text-ink-4 transition-colors hover:text-brand">פרויקטים</a></li>
+        <li><a href="#testimonials" class="text-base text-ink-4 transition-colors hover:text-brand">המלצות</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="תחומי פעילות">
+      <h2 class="text-lg font-medium text-ink-7">תחומי פעילות</h2>
+      <ul class="mt-6 flex flex-col gap-4">
+        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
+        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
+        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="text-lg font-medium text-ink-7">יצירת קשר</h2>
+      <ul class="mt-6 flex flex-col gap-4 text-base text-ink-4">
+        <li><a href="tel:+972544980159" class="flex items-center gap-2.5 transition-colors hover:text-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 text-ink-7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="ltr">054-4980159</span></a></li>
+        <li><a href="#" data-wa class="flex items-center gap-2.5 transition-colors hover:text-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 text-ink-7"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>וואטסאפ</a></li>
+        <li><a href="mailto:doron@ba-yazamut.co.il" class="flex items-center gap-2.5 transition-colors hover:text-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 text-ink-7"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="ltr">doron@ba-yazamut.co.il</span></a></li>
+        <li class="flex items-center gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px] shrink-0 text-ink-7"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>רבי עקיבא 101, בני ברק</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-ink-10 bg-ink-12">
+    <div class="mx-auto max-w-[1440px] px-4 py-6 sm:px-8 lg:px-16">
+      <p id="rights" class="text-sm text-ink-7"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const WA = "https://wa.me/972544980159?text=" + encodeURIComponent("היי דורון, הגעתי מהאתר ואשמח לדבר על נכס");
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = WA; a.target = "_blank"; a.rel = "noopener noreferrer"; });
+document.getElementById("rights").textContent = "© " + new Date().getFullYear() + " דורון בן ארבון — תיווך מסחרי. כל הזכויות שמורות.";
+
+/* spirograph rosettes */
+const NS = "http://www.w3.org/2000/svg";
+document.querySelectorAll("[data-spiro]").forEach(svg => {
+  const n = +svg.dataset.spiro;
+  for (let i = 0; i < n; i++) {
+    const e = document.createElementNS(NS, "ellipse");
+    e.setAttribute("cx", "200"); e.setAttribute("cy", "200");
+    e.setAttribute("rx", "197"); e.setAttribute("ry", "119");
+    e.setAttribute("transform", `rotate(${(i * 180) / n} 200 200)`);
+    e.setAttribute("stroke", "currentColor"); e.setAttribute("stroke-width", "0.55");
+    svg.appendChild(e);
+  }
+});
+
+/* stars */
+const STAR = '<svg viewBox="0 0 24 24" fill="currentColor" class="h-[15px] w-[15px] text-[#F5B02E]"><path d="M12 1.6l3.1 6.5 7 1-5.1 5 1.2 7.1-6.2-3.4-6.2 3.4 1.2-7.1-5.1-5 7-1z"/></svg>';
+document.querySelectorAll("[data-stars]").forEach(el => { el.innerHTML = STAR.repeat(+el.dataset.stars); });
+const STAR_MD = '<svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4 text-[#F5B02E]"><path d="M12 1.6l3.1 6.5 7 1-5.1 5 1.2 7.1-6.2-3.4-6.2 3.4 1.2-7.1-5.1-5 7-1z"/></svg>';
+const STAR_LG = '<svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-[#F5B02E]"><path d="M12 1.6l3.1 6.5 7 1-5.1 5 1.2 7.1-6.2-3.4-6.2 3.4 1.2-7.1-5.1-5 7-1z"/></svg>';
+document.querySelectorAll("[data-stars5]").forEach(el => { el.innerHTML = STAR_MD.repeat(5); });
+
+/* mobile menu */
+const menuBtn = document.getElementById("menuBtn"), drawer = document.getElementById("drawer");
+const ICON_MENU = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`;
+const ICON_X = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5"><path d="M18 6 6 18M6 6l12 12"/></svg>`;
+menuBtn.addEventListener("click", () => {
+  const open = drawer.classList.toggle("hidden") === false;
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "סגירת התפריט" : "פתיחת התפריט");
+  menuBtn.innerHTML = open ? ICON_X : ICON_MENU;
+  document.body.style.overflow = open ? "hidden" : "";
+});
+drawer.addEventListener("click", e => { if (e.target.closest("a")) menuBtn.click(); });
+addEventListener("scroll", () => {
+  document.getElementById("hdr").classList.toggle("bg-ink-13/90", scrollY > 8);
+  document.getElementById("hdr").classList.toggle("backdrop-blur-md", scrollY > 8);
+}, { passive: true });
+
+/* ---- data ---- */
+const PROJECTS = [
+  { id:"hadad", c:"commercial", t:"האחים חדד – כלי כסף", d:"השכרת שטח מסחרי גדול לרשת כלי כסף מובילה, כולל התאמת השטח לצורכי התצוגה והמכירה.", l:"רח׳ הקישון, בני ברק", g:["550 מ״ר","שטח מסחרי"], i:"proj-hadad.jpg" },
+  { id:"glory", c:"commercial", t:"יבואן גלורי", d:"מחסנים ומשרדים ליבואן פעיל — שילוב של שטח אחסון נוח וקומת משרדים צמודה.", l:"רח׳ הקישון, בני ברק", g:["300 מ״ר","מחסנים ומשרדים"], i:"proj-glory.jpg" },
+  { id:"mishkan", c:"commercial", t:"משכן התכלת", d:"השכרת ארבע חנויות ברחבי בני ברק לרשת אחת, בהתאמה מדויקת של מיקום וקהל לכל סניף.", l:"ברחבי בני ברק", g:["4 חנויות","רשת קמעונאית"], i:"proj-mishkan.jpg" },
+  { id:"akiva-101", c:"project-marketing", t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", l:"רבי עקיבא 101, בני ברק", g:["מגורים ומסחר","אוכלס במלואו"], i:"proj-akiva101.jpg" },
+  { id:"akiva-34", c:"project-marketing", t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", l:"רבי עקיבא 34, בני ברק", g:["2,000 מ״ר","מסחר ומשרדים"], i:"proj-akiva34.jpg" },
+  { id:"hazon-ish-12", c:"project-marketing", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", l:"חזון איש 12, בני ברק", g:["900 מ״ר","מבנה ציבור"], i:"proj-hazon12.jpg" }
+];
+const FILTERS = [["all","הכל"],["commercial","תיווך מסחרי"],["project-marketing","שיווק פרויקטים"],["plots","מגרשים"]];
+const SERVICES = [
+  { id:"commercial", t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק — איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg" },
+  { id:"project-marketing", t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים — בניינים ומתחמים — עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg" },
+  { id:"plots", t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות ללוחות.", i:"svc-plots.jpg" }
+];
+const TESTIS = [
+  { q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
+  { q:"״דורון תרם רבות להצלחתו של הפרויקט. היחס המיוחד שלו והליווי גם לאחר חתימת החוזה יוצאים מגדר הרגיל — ללא צל של ספק הייתי פונה אליו לכל פרויקט בבני ברק.״", a:"שי פסל", r:"גרסטנפלד הנדסה ובניין בע״מ", n:"שפ" },
+  { q:"״אחד המשרדים החזקים והמומלצים בבני ברק. 100% אמינות, ליווי אישי ומקצועי, התמצאות במחירי השוק וליווי עד לחתימת החוזה. אנחנו מרוצים מאוד מהעבודה איתו.״", a:"יוסף בן פז", r:"מנכ״ל, יגאל נכסים", n:"יב" }
+];
+const IMG = "../lovable/public/images/";
+
+/* services */
+document.getElementById("services-grid").innerHTML = SERVICES.map(s => `
+  <article class="group flex flex-col gap-8 rounded-2xl border border-ink-10 bg-ink-12 p-6">
+    <div class="h-[220px] w-full overflow-hidden rounded-2xl">
+      <img src="${IMG}${s.i}" alt="${s.t}" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+    </div>
+    <div class="flex flex-1 flex-col gap-3">
+      <h3 class="font-display text-d3 font-bold text-ink-4" data-edit="services.${s.id}.title" data-edit-label="כותרת שירות">${s.t}</h3>
+      <p class="text-base leading-[1.5] text-ink-6" data-edit="services.${s.id}.description" data-edit-label="תיאור שירות">${s.d}</p>
+    </div>
+    <a href="#" class="inline-flex items-center gap-2 self-start text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand"><span data-edit="servicesSection.linkLabel" data-edit-label="קישור קראו עוד בכרטיסי שירות">קראו עוד…</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+    </a>
+  </article>`).join("");
+
+/* google reviews */
+const GREVIEWS = [
+  { n:"G", a:"Glory office", w:"לפני חודש", t:"איש מדהים ויקר שמלווה אותך עד לחתימה ודואג ללקוח הכי הרבה. נאמן, אמין, דיסקרטי וישר. התיווך הכי טוב מכל הסיבות שבעולם — דורון מתווך מושלם." },
+  { n:"M", a:"Meitavel Simhi", w:"לפני 6 חודשים", t:"המתווך הכי טוב ומקצועי שתמצאו. דורון איש מדהים, מגדיל ראש, אפשר לסמוך עליו גם בדברים קטנים — במיוחד אם אתה לא נמצא בעיר." },
+  { n:"Y", a:"yoel rosner", w:"לפני שנה", t:"תיווך דורון הציע לי נכס ולא ראיתי כזה מתווך בחיים. עם כזאת הוגנות ויושר ורצון שיהיה ללקוח הכי טוב שאפשר, ולא דוחף אותך לעסקה עד שבדקת שהכל טוב לך, ומלווה אותך לאורך כל הדרך. בפעם הבאה אני פונה רק לדורון." }
+];
+const G_SMALL = '<svg viewBox="0 0 48 48" class="h-6 w-6 shrink-0" aria-hidden><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+const revTrack = document.getElementById("revTrack");
+const revDots = document.getElementById("revDots");
+revTrack.innerHTML = GREVIEWS.map(r => `
+  <figure class="w-full shrink-0 px-1">
+    <div class="mx-auto flex max-w-[900px] flex-col gap-7 rounded-2xl border border-ink-10 bg-ink-12 p-7 sm:p-10">
+      <div class="flex items-center gap-4">
+        <div aria-hidden class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand font-display text-xl font-bold text-white">${r.n}</div>
+        <div class="min-w-0 flex-1">
+          <p class="truncate text-base font-bold text-ink-4">${r.a}</p>
+          <p class="text-sm text-ink-7">${r.w}</p>
+        </div>
+        ${G_SMALL}
+      </div>
+      <div class="flex items-center gap-[3px]" aria-label="5 מתוך 5">${STAR_LG.repeat(5)}</div>
+      <blockquote class="font-display text-[19px] font-medium leading-[1.45] text-ink-4 sm:text-[22px] sm:leading-[1.4]">${r.t}</blockquote>
+    </div>
+  </figure>`).join("");
+
+let revIndex = 0, revPaused = false;
+function renderDots() {
+  revDots.innerHTML = GREVIEWS.map((_, i) => `<button type="button" role="tab" aria-selected="${i === revIndex}" aria-label="ביקורת ${i + 1}" data-rev="${i}" class="h-2 rounded-full transition-all duration-300 ${i === revIndex ? "w-7 bg-brand" : "w-2 bg-ink-10 hover:bg-ink-7"}"></button>`).join("");
+}
+function revGo(next) {
+  revIndex = ((next % GREVIEWS.length) + GREVIEWS.length) % GREVIEWS.length;
+  // RTL: slide 0 sits at the right edge, later slides need a positive X shift
+  revTrack.style.transform = `translateX(${revIndex * 100}%)`;
+  renderDots();
+}
+revGo(0);
+revDots.addEventListener("click", e => { const b = e.target.closest("[data-rev]"); if (b) revGo(+b.dataset.rev); });
+document.getElementById("revNext").addEventListener("click", () => revGo(revIndex + 1));
+document.getElementById("revPrev").addEventListener("click", () => revGo(revIndex - 1));
+const revWrap = document.getElementById("revWrap");
+revWrap.addEventListener("mouseenter", () => { revPaused = true; });
+revWrap.addEventListener("mouseleave", () => { revPaused = false; });
+setInterval(() => { if (!revPaused) revGo(revIndex + 1); }, 7000);
+
+/* business testimonials (compact) */
+document.getElementById("testi-grid").innerHTML = TESTIS.map(t => `
+  <figure class="flex flex-col gap-5 rounded-2xl border border-ink-10 bg-ink-13 p-6">
+    <div class="flex items-center gap-3">
+      <div aria-hidden class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand font-display text-base font-bold text-white">${t.n}</div>
+      <figcaption class="min-w-0">
+        <span class="block truncate text-[15px] font-bold text-ink-4">${t.a}</span>
+        <span class="block truncate text-[13px] text-ink-7">${t.r}</span>
+      </figcaption>
+    </div>
+    <blockquote class="text-[15px] leading-[1.6] text-ink-6">${t.q}</blockquote>
+  </figure>`).join("");
+
+/* projects + tabs + carousel */
+const track = document.getElementById("track"), empty = document.getElementById("empty"), pager = document.getElementById("pager");
+let filter = "all";
+
+document.getElementById("tabs").innerHTML = FILTERS.map(([id, label]) => `
+  <button type="button" role="tab" data-f="${id}" aria-selected="${id === "all"}"
+    class="flex h-[53px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[15px] font-medium transition-colors sm:text-base ${id === "all" ? "border-ink-10 bg-ink-13 text-ink-4" : "border-transparent text-ink-7 hover:text-ink-4"}">${label}</button>`).join("");
+
+function card(p) {
+  return `<article class="flex w-[85vw] shrink-0 snap-start flex-col gap-8 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:w-[360px] lg:w-[calc((100%-2rem)/3)]">
+    <div class="h-[220px] w-full overflow-hidden rounded-2xl sm:h-[300px]">
+      <img src="${IMG}${p.i}" alt="${p.t}" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
+    </div>
+    <div class="flex flex-1 flex-col gap-6">
+      <div class="flex flex-col gap-2">
+        <h3 class="font-display text-d3 font-bold text-ink-4" data-edit="projects.${p.id}.title" data-edit-label="כותרת פרויקט">${p.t}</h3>
+        <p class="line-clamp-2-safe text-base leading-[1.5] text-ink-6" data-edit="projects.${p.id}.description" data-edit-label="תיאור פרויקט">${p.d}</p>
+      </div>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-1.5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[14px] w-[14px] shrink-0 text-ink-7"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="truncate text-sm text-ink-7">${p.l}</span>
+        </div>
+        <ul class="flex flex-wrap gap-2">${p.g.map(g => `<li class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-4 py-2 text-xs text-ink-6">${g}</li>`).join("")}</ul>
+      </div>
+      <a href="${WA}" target="_blank" rel="noopener noreferrer" class="btn-inner-brand relative mt-auto flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5" data-edit="projectsSection.cardCta" data-edit-label="כפתור בכרטיס פרויקט">דברו איתי על נכס דומה</a>
+    </div>
+  </article>`;
+}
+
+function render() {
+  const list = filter === "all" ? PROJECTS : PROJECTS.filter(p => p.c === filter);
+  track.innerHTML = list.map(card).join("");
+  const has = list.length > 0;
+  track.classList.toggle("hidden", !has);
+  pager.classList.toggle("hidden", !has);
+  empty.classList.toggle("hidden", has);
+  empty.classList.toggle("flex", !has);
+  track.scrollLeft = 0;
+  measure();
+}
+function measure() {
+  const first = track.firstElementChild;
+  if (!first) return;
+  const step = first.offsetWidth + 16;
+  const all = track.children.length;
+  const now = Math.min(all, Math.round(Math.abs(track.scrollLeft) / step) + 1);
+  document.getElementById("pgAll").textContent = String(all).padStart(2, "0");
+  document.getElementById("pgNow").textContent = String(now).padStart(2, "0");
+  if (window.__veApplyEdits) window.__veApplyEdits();
+}
+track.addEventListener("scroll", measure, { passive: true });
+addEventListener("resize", measure);
+const step = () => (track.firstElementChild ? track.firstElementChild.offsetWidth + 16 : track.clientWidth);
+document.getElementById("next").addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+document.getElementById("prev").addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+document.getElementById("tabs").addEventListener("click", e => {
+  const btn = e.target.closest("[data-f]"); if (!btn) return;
+  filter = btn.dataset.f;
+  document.querySelectorAll("#tabs [data-f]").forEach(b => {
+    const on = b.dataset.f === filter;
+    b.setAttribute("aria-selected", String(on));
+    b.className = `flex h-[53px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[15px] font-medium transition-colors sm:text-base ${on ? "border-ink-10 bg-ink-13 text-ink-4" : "border-transparent text-ink-7 hover:text-ink-4"}`;
+  });
+  render();
+});
+render();
+</script>
+<!-- ===== VISUAL TEXT EDITOR (edit.html only — never shipped to the live site) ===== -->
+<style>
+  .ve-mode [data-edit]{outline:1px dashed rgba(10,184,157,.55);outline-offset:3px;border-radius:4px;cursor:text;transition:background-color .15s}
+  .ve-mode [data-edit]:hover{background-color:rgba(10,184,157,.10)}
+  .ve-mode [data-edit]:focus{outline:2px solid #0AB89D;background-color:rgba(10,184,157,.14)}
+  #ve-fab{position:fixed;bottom:20px;left:20px;z-index:99999;background:#0AB89D;color:#fff;border:0;
+    border-radius:999px;padding:14px 22px;font:700 14px Assistant,system-ui,sans-serif;cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);direction:rtl}
+  #ve-fab.on{background:#161514;border:1px solid #282726}
+  #ve-panel{position:fixed;bottom:78px;left:20px;z-index:99998;width:290px;max-width:calc(100vw - 40px);
+    background:#161514;color:#F0F0F0;border:1px solid #282726;border-radius:14px;
+    box-shadow:0 12px 34px rgba(0,0,0,.45);padding:16px;font:13px Assistant,system-ui,sans-serif;
+    display:none;direction:rtl;text-align:right}
+  #ve-panel.open{display:block}
+  #ve-panel h4{margin:0 0 8px;font-size:15px;font-weight:700;color:#fff}
+  #ve-panel p{margin:0;color:#8D8D8C;line-height:1.5}
+  #ve-count-wrap{margin-top:10px}
+  #ve-count{color:#0AB89D;font-weight:700}
+  #ve-panel button{width:100%;border:0;border-radius:8px;padding:11px;font:700 13px Assistant,system-ui,sans-serif;cursor:pointer;margin-top:8px}
+  #ve-copy{background:#0AB89D;color:#fff}
+  #ve-reset{background:#282726;color:#F0F0F0}
+  #ve-pill{position:fixed;z-index:100000;background:#161514;color:#fff;border:1px solid #0AB89D;border-radius:8px;
+    padding:6px 8px 6px 12px;font:600 12px Assistant,system-ui,sans-serif;display:none;align-items:center;gap:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,.45);direction:rtl}
+  #ve-pill.show{display:flex}
+  #ve-pill button{background:transparent;border:0;color:#0AB89D;cursor:pointer;font:700 12px Assistant,system-ui,sans-serif;padding:4px 6px}
+</style>
+
+<button id="ve-fab" type="button">✎ עריכת טקסט</button>
+<aside id="ve-panel">
+  <h4>עריכת דף הבית</h4>
+  <p>לחצי על כל טקסט עם מסגרת מקווקוות ותקלידי ישירות. השינויים נשמרים אוטומטית בדפדפן הזה.</p>
+  <div id="ve-count-wrap"><span id="ve-count">0</span> שינויים ממתינים</div>
+  <button id="ve-copy" type="button">📋 העתיקי שינויים לקלוד</button>
+  <button id="ve-reset" type="button">↺ אפסי הכל</button>
+</aside>
+<div id="ve-pill"><span id="ve-pill-label"></span><button id="ve-pill-reset" type="button">↺ איפוס שדה</button></div>
+
+<script>
+(function () {
+  const STORAGE_KEY = "doron-site-edits-v1";
+  const fab = document.getElementById("ve-fab");
+  const panel = document.getElementById("ve-panel");
+  const countEl = document.getElementById("ve-count");
+  const pill = document.getElementById("ve-pill");
+  const pillLabel = document.getElementById("ve-pill-label");
+  const pillReset = document.getElementById("ve-pill-reset");
+
+  let editMode = false;
+  let focusedId = null;
+  const originals = {};
+  let edits = {};
+  try { edits = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { edits = {}; }
+
+  function captureOriginals() {
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (!(id in originals)) originals[id] = el.textContent.trim();
+    });
+  }
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+    countEl.textContent = Object.keys(edits).length;
+  }
+  function applyEdits() {
+    for (const id in edits) {
+      document.querySelectorAll('[data-edit="' + CSS.escape(id) + '"]').forEach((el) => {
+        if (document.activeElement === el) return;
+        if (el.textContent.trim() !== edits[id]) el.textContent = edits[id];
+      });
+    }
+  }
+  window.__veApplyEdits = applyEdits;
+  function labelOf(el) { return el.getAttribute("data-edit-label") || el.getAttribute("data-edit"); }
+
+  function positionPill(el) {
+    const r = el.getBoundingClientRect();
+    pill.style.top = Math.max(8, r.top - 42) + "px";
+    let left = Math.min(r.left, window.innerWidth - pill.offsetWidth - 8);
+    pill.style.left = Math.max(8, left) + "px";
+  }
+  function showPillFor(el) {
+    focusedId = el.getAttribute("data-edit");
+    pillLabel.textContent = labelOf(el);
+    pill.classList.add("show");
+    positionPill(el);
+  }
+  function hidePill() { pill.classList.remove("show"); focusedId = null; }
+
+  function setEditMode(on) {
+    editMode = on;
+    document.body.classList.toggle("ve-mode", on);
+    fab.classList.toggle("on", on);
+    fab.textContent = on ? "✓ סיימתי לערוך" : "✎ עריכת טקסט";
+    panel.classList.toggle("open", on);
+    document.querySelectorAll("[data-edit]").forEach((el) => { el.contentEditable = on ? "true" : "false"; });
+    if (!on) hidePill();
+  }
+  fab.addEventListener("click", () => setEditMode(!editMode));
+
+  document.addEventListener("focusin", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    showPillFor(el);
+  });
+  document.addEventListener("focusout", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!el) return;
+    const id = el.getAttribute("data-edit");
+    const val = el.textContent.trim();
+    if (val === (originals[id] || "")) delete edits[id]; else edits[id] = val;
+    save();
+    hidePill();
+  });
+  document.addEventListener("input", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    const id = el.getAttribute("data-edit");
+    const val = el.textContent.trim();
+    if (val === (originals[id] || "")) delete edits[id]; else edits[id] = val;
+    save();
+    document.querySelectorAll('[data-edit="' + CSS.escape(id) + '"]').forEach((other) => {
+      if (other !== el) other.textContent = val;
+    });
+    if (focusedId === id) positionPill(el);
+  });
+  window.addEventListener("scroll", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); }, true);
+  window.addEventListener("resize", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); });
+
+  pillReset.addEventListener("click", () => {
+    if (!focusedId) return;
+    document.querySelectorAll('[data-edit="' + CSS.escape(focusedId) + '"]').forEach((el) => { el.textContent = originals[focusedId] || ""; });
+    delete edits[focusedId];
+    save();
+    hidePill();
+  });
+
+  document.getElementById("ve-reset").addEventListener("click", () => {
+    if (!confirm("לאפס את כל השינויים שנעשו כאן? הפעולה לא הפיכה.")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  document.getElementById("ve-copy").addEventListener("click", async () => {
+    const ids = Object.keys(edits);
+    let text;
+    if (!ids.length) {
+      text = "לא בוצעו שינויים עדיין בעורך.";
+    } else {
+      const lines = ids.map((id) => {
+        const el = document.querySelector('[data-edit="' + CSS.escape(id) + '"]');
+        const label = el ? labelOf(el) : id;
+        return "- [" + id + "] " + label + ':\n  לפני: "' + (originals[id] || "") + '"\n  אחרי: "' + edits[id] + '"';
+      });
+      text =
+        "עדכני בבקשה את תוכן האתר (site.ts, וגם preview/index.html) לפי השינויים הבאים שערכתי בעורך הוויזואלי:\n\n" +
+        lines.join("\n\n") +
+        "\n\nעדכני בכל המקומות הרלוונטיים (site.ts + preview/index.html + הרכיבים ב-React אם צריך) ושמרי על עיצוב זהה. אל תעלי ל-Lovable בלי אישור.";
+    }
+    try { await navigator.clipboard.writeText(text); } catch (e) { window.prompt("העתיקי ידנית:", text); }
+    const b = document.getElementById("ve-copy");
+    const old = b.textContent;
+    b.textContent = "✓ הועתק! הדביקי לקלוד בצ'אט";
+    setTimeout(() => { b.textContent = old; }, 2500);
+  });
+
+  captureOriginals();
+  applyEdits();
+  save();
+})();
+</script>
+</body>
+</html>
+
