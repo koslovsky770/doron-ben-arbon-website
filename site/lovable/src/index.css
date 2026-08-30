@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   Polin — the brand typeface. Two cuts only (Regular + Bold), so the
+   weight ranges below map every Tailwind font-weight onto a real file
+   and stop the browser from synthesising a faux bold.
+   ------------------------------------------------------------------ */
+
+@font-face {
+  font-family: "Polin";
+  src: url("/fonts/Polin-Regular.woff2") format("woff2"),
+       url("/fonts/Polin-Regular.woff") format("woff");
+  font-weight: 100 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("/fonts/Polin-Bold.woff2") format("woff2"),
+       url("/fonts/Polin-Bold.woff") format("woff");
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------------
+   Design tokens — Doron Ben Arbon, commercial real estate
+   Scale taken 1:1 from the Figma template; the accent was replaced
+   with the brand teal from the DORON logo (#0AB89D).
+   ------------------------------------------------------------------ */
+
+@layer base {
+  :root {
+    /* neutral ramp (Figma gray-1 … gray-13) */
+    --ink-1: 0 0% 100%; /* #FFFFFF */
+    --ink-2: 0 0% 99%; /* #FCFCFC */
+    --ink-4: 0 0% 94%; /* #F0F0F0 */
+    --ink-6: 60 1% 75%; /* #C0C0BF */
+    --ink-7: 60 1% 55%; /* #8D8D8C */
+    --ink-10: 60 3% 15%; /* #282726 */
+    --ink-11: 0 2% 12%; /* #201F1F */
+    --ink-12: 30 5% 8%; /* #161514 */
+    --ink-13: 30 100% 0.4%; /* #020100 */
+
+    /* brand */
+    --brand: 171 90% 38%; /* #0AB89D — from the logo */
+    --brand-light: 168 62% 51%; /* inner highlight on brand buttons */
+    --brand-dark: 172 92% 30%;
+
+    /* shadcn semantic tokens */
+    --background: var(--ink-13);
+    --foreground: var(--ink-4);
+
+    --card: var(--ink-13);
+    --card-foreground: var(--ink-4);
+
+    --popover: var(--ink-12);
+    --popover-foreground: var(--ink-4);
+
+    --primary: var(--brand);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--ink-12);
+    --secondary-foreground: var(--ink-4);
+
+    --muted: var(--ink-11);
+    --muted-foreground: var(--ink-7);
+
+    --accent: var(--brand);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--ink-10);
+    --input: var(--ink-10);
+    --ring: var(--brand);
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* the whole site is Hebrew — RTL is the document default */
+    direction: rtl;
+  }
+
+  /* Latin runs inside Hebrew copy (phone numbers, DORON) stay LTR */
+  .ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+}
+
+@layer components {
+  /* soft inner highlight used on every filled button in the template */
+  .btn-inner-brand {
+    box-shadow: inset -3px 5px 4px 0 hsl(var(--brand-light) / 0.9);
+  }
+  .btn-inner-dark {
+    box-shadow: inset -3px 5px 4px 0 hsl(0 0% 17%);
+  }
+
+  .line-clamp-2-safe {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
