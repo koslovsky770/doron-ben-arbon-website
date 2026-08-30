@@ -1,5 +1,5 @@
 import { ArrowLeft } from "lucide-react";
-import { AsteriskMark } from "@/components/site/Icons";
+import { RoundArrowMark } from "@/components/site/Icons";
 import { servicesSection } from "@/data/site";
 
 export function Services() {
@@ -11,7 +11,7 @@ export function Services() {
             <h2 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
               {servicesSection.title}
             </h2>
-            <AsteriskMark className="h-[38px] w-[38px] shrink-0 text-brand" />
+            <RoundArrowMark className="h-[38px] w-[38px] shrink-0 text-brand" />
           </div>
           <p className="mx-auto mt-6 max-w-[674px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
             {servicesSection.paragraph}

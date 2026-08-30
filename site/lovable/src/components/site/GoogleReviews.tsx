@@ -69,9 +69,6 @@ export function GoogleReviews() {
             </h2>
             <GoogleG className="h-9 w-9 shrink-0" />
           </div>
-          <p className="mx-auto mt-6 max-w-[676px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
-            {googleReviewsSection.paragraph}
-          </p>
 
           {/* live rating badge */}
           <div className="mt-8 inline-flex items-center gap-4 rounded-xl border border-ink-10 bg-ink-12 px-6 py-4">

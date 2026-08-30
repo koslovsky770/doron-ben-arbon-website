@@ -7,6 +7,30 @@
 
 type SvgProps = React.SVGProps<SVGSVGElement>;
 
+/**
+ * Just the ring + arrowhead from the DORON logo, without the house —
+ * used as a small decorative accent next to section titles.
+ */
+export function RoundArrowMark({ className, ...props }: SvgProps) {
+  return (
+    <svg viewBox="0 0 100 100" fill="none" className={className} aria-hidden {...props}>
+      <path
+        d="M62.6 18.6A34 34 0 1 0 78.9 32.2"
+        stroke="currentColor"
+        strokeWidth="7"
+        strokeLinecap="round"
+      />
+      <path
+        d="M71 31 L79.5 24 L86 33.5"
+        stroke="currentColor"
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 /** The circular-arrow-around-a-house mark from the existing DORON logo. */
 export function LogoMark({ className, ...props }: SvgProps) {
   return (

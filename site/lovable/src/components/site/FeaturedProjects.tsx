@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
-import { SlashMark } from "@/components/site/Icons";
+import { RoundArrowMark } from "@/components/site/Icons";
 import {
   projectFilters,
   projects,
@@ -52,7 +52,7 @@ function ProjectCard({ project }: { project: Project }) {
           href={site.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative mt-auto flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 btn-inner-brand"
+          className="mt-auto flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-light"
         >
           {projectsSection.cardCta}
         </a>
@@ -105,7 +105,7 @@ export function FeaturedProjects() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[796px]">
             <div className="flex items-center gap-6">
-              <SlashMark className="h-[38px] w-[38px] shrink-0 text-brand" />
+              <RoundArrowMark className="h-[38px] w-[38px] shrink-0 text-brand" />
               <h2 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
                 {projectsSection.title}
               </h2>
