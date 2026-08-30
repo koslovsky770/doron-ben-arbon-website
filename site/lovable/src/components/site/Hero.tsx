@@ -70,10 +70,15 @@ export function Hero() {
       {/* text column */}
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:px-16 lg:pb-[164px] lg:pt-[268px]">
         <div className="max-w-[680px] animate-fade-up">
-          <h1 className="font-display text-d1 font-extrabold tracking-tight text-ink-2">
-            {hero.title}
+          <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
+            {hero.titleStart}
+            <span className="text-brand">{hero.titleHighlight}</span>
+            {hero.titleEnd}
           </h1>
-          <p className="mt-6 max-w-[680px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
+          <p className="mt-4 max-w-[600px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">
+            {hero.subtitle}
+          </p>
+          <p className="mt-5 max-w-[680px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
             {hero.paragraph}
           </p>
 
