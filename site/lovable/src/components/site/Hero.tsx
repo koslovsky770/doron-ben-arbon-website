@@ -37,15 +37,17 @@ function FloatingReview({
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink-13">
+    <section className="relative overflow-hidden bg-ink-13 lg:flex lg:items-stretch">
       {/* faint background rosette, as in the template's "Bg elements" layer */}
       <SpiroRing
         lines={31}
         className="pointer-events-none absolute -top-[45%] right-[-25%] h-[1400px] w-[1400px] text-brand/[0.07]"
       />
 
-      {/* image column — left on desktop, stacked on top for mobile */}
-      <div className="relative h-[380px] w-full sm:h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2">
+      {/* image column — left on desktop, stacked on top for mobile.
+          Flex (not absolute) so the text column always gets exactly what's
+          left — no fixed math to keep in sync, no overlap risk. */}
+      <div className="relative h-[380px] w-full overflow-hidden sm:h-[460px] lg:h-auto lg:w-[62%] lg:shrink-0">
         <img
           src="/images/hero.jpg"
           alt="נוף לילי של מגדלי משרדים במרכז העסקים"
@@ -68,7 +70,7 @@ export function Hero() {
       </div>
 
       {/* text column */}
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:px-16 lg:pb-[164px] lg:pt-[268px]">
+      <div className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px]">
         <div className="max-w-[680px] animate-fade-up">
           <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
             {hero.titleStart}
