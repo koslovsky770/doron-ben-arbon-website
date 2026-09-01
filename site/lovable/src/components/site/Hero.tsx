@@ -45,7 +45,7 @@ export function Hero() {
       />
 
       {/* image column — left on desktop, stacked on top for mobile */}
-      <div className="relative h-[380px] w-full sm:h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-[49%]">
+      <div className="relative h-[380px] w-full sm:h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2">
         <img
           src="/images/hero.jpg"
           alt="נוף לילי של מגדלי משרדים במרכז העסקים"
