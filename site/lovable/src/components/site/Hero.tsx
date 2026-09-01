@@ -48,11 +48,11 @@ export function Hero() {
       <div className="relative h-[380px] w-full sm:h-[460px] lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-[49%]">
         <img
           src="/images/hero.jpg"
-          alt="בניין מסחרי מודרני עם חנויות בקומת הקרקע"
+          alt="נוף לילי של מגדלי משרדים במרכז העסקים"
           className="h-full w-full object-cover object-center"
           loading="eager"
-          width={1024}
-          height={1536}
+          width={1200}
+          height={1600}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-13/40 via-transparent to-ink-13" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-13 to-transparent lg:hidden" />
