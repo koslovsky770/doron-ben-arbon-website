@@ -51,8 +51,8 @@ export function Hero() {
           alt="נוף לילי של מגדלי משרדים במרכז העסקים"
           className="h-full w-full object-cover object-center"
           loading="eager"
-          width={1200}
-          height={1600}
+          width={1400}
+          height={1050}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-13/40 via-transparent to-ink-13" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-13 to-transparent lg:hidden" />
