@@ -64,7 +64,7 @@ export function Hero() {
           width={1400}
           height={1050}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-13/40 via-transparent to-ink-13" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(2,1,0,0.35)_0%,rgba(2,1,0,0)_30%,rgba(2,1,0,0.6)_50%,rgba(2,1,0,0.92)_65%,rgb(2,1,0)_78%)]" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-13 to-transparent lg:hidden" />
 
         <FloatingReview
@@ -77,24 +77,25 @@ export function Hero() {
         />
       </div>
 
-      {/* text column — pulled left over the image's already-blurred/blacked-out
-          right edge (see BlendRightFade in the source photo) so the text
-          block lines up with the section grids below instead of being
-          boxed into the flex remainder. */}
+      {/* text column — pulled left over the image's darkened right portion
+          (see the gradient scrim above, tuned to be fully solid well before
+          this column starts) so the block sits inside the same wide area as
+          the section grids below instead of being boxed into a narrow strip
+          on the right. */}
       <div
         dir="rtl"
-        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px] lg:-ml-[220px]"
+        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px] lg:-ml-[30%]"
       >
-        <div className="max-w-[680px] animate-fade-up">
+        <div className="max-w-[1040px] animate-fade-up">
           <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
             {hero.titleStart}
             <span className="text-brand">{hero.titleHighlight}</span>
             {hero.titleEnd}
           </h1>
-          <p className="mt-4 max-w-[600px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">
+          <p className="mt-4 max-w-[820px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">
             {hero.subtitle}
           </p>
-          <p className="mt-5 max-w-[680px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
+          <p className="mt-5 max-w-[1040px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
             {hero.paragraph}
           </p>
 
