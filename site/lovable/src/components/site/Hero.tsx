@@ -84,18 +84,18 @@ export function Hero() {
           on the right. */}
       <div
         dir="rtl"
-        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px] lg:-ml-[30%]"
+        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:pl-16 lg:pr-[285px] lg:pb-[164px] lg:pt-[268px] lg:-ml-[30%]"
       >
-        <div className="max-w-[1040px] animate-fade-up">
+        <div className="max-w-[815px] animate-fade-up">
           <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
             {hero.titleStart}
             <span className="text-brand">{hero.titleHighlight}</span>
             {hero.titleEnd}
           </h1>
-          <p className="mt-4 max-w-[820px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">
+          <p className="mt-4 max-w-[815px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">
             {hero.subtitle}
           </p>
-          <p className="mt-5 max-w-[1040px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
+          <p className="mt-5 max-w-[815px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
             {hero.paragraph}
           </p>
 
