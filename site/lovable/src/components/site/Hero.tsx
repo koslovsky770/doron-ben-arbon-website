@@ -77,10 +77,13 @@ export function Hero() {
         />
       </div>
 
-      {/* text column */}
+      {/* text column — pulled left over the image's already-blurred/blacked-out
+          right edge (see BlendRightFade in the source photo) so the text
+          block lines up with the section grids below instead of being
+          boxed into the flex remainder. */}
       <div
         dir="rtl"
-        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px]"
+        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px] lg:-ml-[220px]"
       >
         <div className="max-w-[680px] animate-fade-up">
           <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
