@@ -6,7 +6,7 @@
 
 export const site = {
   name: "דורון בן ארבון",
-  shortName: "דורון",
+  shortName: "תיווך דורון",
   business: "תיווך מסחרי",
   tagline: "מתווך בין נכסים לאנשים",
   phone: "054-4980159",

@@ -34,7 +34,7 @@ export function Logo({
             lg ? "text-[26px] lg:text-[34px]" : "text-[23px]"
           }`}
         >
-          דורון
+          {site.shortName}
         </span>
         {showTagline && (
           <span
