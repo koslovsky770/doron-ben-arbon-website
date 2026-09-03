@@ -37,7 +37,10 @@ function FloatingReview({
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-ink-13 lg:flex lg:items-stretch">
+    <section
+      dir="ltr"
+      className="relative overflow-hidden bg-ink-13 lg:flex lg:items-stretch"
+    >
       {/* faint background rosette, as in the template's "Bg elements" layer */}
       <SpiroRing
         lines={31}
@@ -46,8 +49,13 @@ export function Hero() {
 
       {/* image column — left on desktop, stacked on top for mobile.
           Flex (not absolute) so the text column always gets exactly what's
-          left — no fixed math to keep in sync, no overlap risk. */}
-      <div className="relative h-[380px] w-full overflow-hidden sm:h-[460px] lg:h-auto lg:w-[62%] lg:shrink-0">
+          left — no fixed math to keep in sync, no overlap risk.
+          The section is forced dir="ltr" so "first child = left" is the
+          same in every browser: whether flex-direction:row visually
+          reverses under dir="rtl" is NOT consistent across browsers, so
+          we don't rely on it. dir="rtl" comes back here for the Hebrew
+          floating review cards inside. */}
+      <div dir="rtl" className="relative h-[380px] w-full overflow-hidden sm:h-[460px] lg:h-auto lg:w-[62%] lg:shrink-0">
         <img
           src="/images/hero.jpg"
           alt="נוף לילי של מגדלי משרדים במרכז העסקים"
@@ -70,7 +78,10 @@ export function Hero() {
       </div>
 
       {/* text column */}
-      <div className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px]">
+      <div
+        dir="rtl"
+        className="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:px-16 lg:pb-[164px] lg:pt-[268px]"
+      >
         <div className="max-w-[680px] animate-fade-up">
           <h1 className="font-display text-d2 font-extrabold tracking-tight text-ink-2">
             {hero.titleStart}
