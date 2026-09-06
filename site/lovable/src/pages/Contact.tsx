@@ -1,4 +1,5 @@
 import { RoundArrowMark } from "@/components/site/Icons";
+import { ConsentBanner } from "@/components/site/ConsentBanner";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
@@ -30,6 +31,7 @@ const Contact = () => {
         </section>
       </main>
       <Footer />
+      <ConsentBanner />
     </div>
   );
 };

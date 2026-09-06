@@ -14,6 +14,14 @@ export function AboutTestimonials() {
         </div>
       </div>
       <Testimonials />
+      <div className="mx-auto max-w-[1440px] px-4 pb-4 text-center sm:px-8 lg:px-16 lg:pb-6">
+        <a
+          href={aboutPage.testimonials.cta.href}
+          className="inline-flex items-center gap-2 text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand"
+        >
+          {aboutPage.testimonials.cta.label}
+        </a>
+      </div>
     </section>
   );
 }

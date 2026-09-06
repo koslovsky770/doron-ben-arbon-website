@@ -33,8 +33,8 @@ export function ProcessSlider({ title, steps, closing }: ProcessSliderProps) {
       const r = card.getBoundingClientRect();
       const dist = Math.abs(r.left + r.width / 2 - center);
       const norm = Math.min(1, dist / (trackRect.width / 2));
-      card.style.opacity = String(1 - norm * 0.65);
-      card.style.transform = `scale(${1 - norm * 0.08})`;
+      // text stays fully white/legible — only a faint scale hints at focus
+      card.style.transform = `scale(${1 - norm * 0.05})`;
       if (dist < minDist) {
         minDist = dist;
         activeIndex = i;
@@ -98,7 +98,7 @@ export function ProcessSlider({ title, steps, closing }: ProcessSliderProps) {
           {steps.map((step) => (
             <article
               key={step.number}
-              className="flex w-[85%] shrink-0 snap-start flex-col gap-4 rounded-2xl border border-ink-10 bg-ink-12 p-8 transition-[opacity,transform] duration-300 ease-out sm:w-[70%] lg:w-[56%] lg:p-10"
+              className="flex w-[85%] shrink-0 snap-start flex-col gap-4 rounded-2xl border border-ink-10 bg-ink-12 p-8 transition-transform duration-300 ease-out sm:w-[70%] lg:w-[56%] lg:p-10"
             >
               <span className="font-display text-[64px] font-extrabold leading-none text-brand lg:text-[88px]">
                 {step.number}

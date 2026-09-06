@@ -1,4 +1,5 @@
 import { About } from "@/components/site/About";
+import { ConsentBanner } from "@/components/site/ConsentBanner";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { FeaturedProjects } from "@/components/site/FeaturedProjects";
 import { Footer } from "@/components/site/Footer";
@@ -22,6 +23,7 @@ const Index = () => {
         <CtaBanner />
       </main>
       <Footer />
+      <ConsentBanner />
     </div>
   );
 };

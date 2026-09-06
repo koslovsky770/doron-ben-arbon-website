@@ -258,14 +258,19 @@ tailwind.config = {
   </div>
 
   <div class="border-t border-ink-10 bg-ink-12">
-    <div class="mx-auto max-w-[1440px] px-4 py-6 sm:px-8 lg:px-16">
+    <div class="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-16">
       <p id="rights" class="text-sm text-ink-7"></p>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-ink-7">
+        <a href="privacy.html" class="transition-colors hover:text-brand">מדיניות פרטיות</a>
+        <a href="accessibility.html" class="transition-colors hover:text-brand">הצהרת נגישות</a>
+        <a href="https://odesign.co.il/" target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-brand">איפיון, עיצוב ובניה: Odesign</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script>
-const WA = "https://wa.me/972544980159?text=" + encodeURIComponent("היי דורון, הגעתי מהאתר ואשמח לדבר על נכס");
+const WA = "https://wa.me/972544980159?text=" + encodeURIComponent("שלום, דורון, אני פונה אליך דרך האתר. אשמח שתחזור אלי.");
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = WA; a.target = "_blank"; a.rel = "noopener noreferrer"; });
 document.getElementById("rights").textContent = "© " + new Date().getFullYear() + " דורון בן ארבון — תיווך מסחרי. כל הזכויות שמורות.";
 
@@ -327,8 +332,7 @@ function measureProcess() {
     const r = card.getBoundingClientRect();
     const dist = Math.abs(r.left + r.width / 2 - center);
     const norm = Math.min(1, dist / (trackRect.width / 2));
-    card.style.opacity = String(1 - norm * 0.65);
-    card.style.transform = `scale(${1 - norm * 0.08})`;
+    card.style.transform = `scale(${1 - norm * 0.05})`;
     if (dist < minDist) { minDist = dist; activeIndex = i; }
   });
   processNow.textContent = String(activeIndex + 1).padStart(2, "0");
@@ -583,16 +587,18 @@ document.getElementById("listings-track").innerHTML = LISTINGS.map(p => `
   }
 
   document.getElementById("ve-copy").addEventListener("click", async () => {
-    const ids = Object.keys(edits);
+    // ids can belong to fields that only exist on OTHER pages (localStorage
+    // is shared site-wide) — only report the ones present on this page.
+    const ids = Object.keys(edits).filter((id) => document.querySelector('[data-edit="' + CSS.escape(id) + '"]'));
     let text;
     if (!ids.length) {
-      text = "לא בוצעו שינויים עדיין בעורך.";
+      text = "לא בוצעו שינויים עדיין בעורך בעמוד הזה.";
     } else {
       const lines = ids.map((id) => {
         const el = document.querySelector('[data-edit="' + CSS.escape(id) + '"]');
-        const label = el ? labelOf(el) : id;
+        const label = labelOf(el);
         if (edits[id].deleted) return "- [" + id + "] " + label + ": למחוק את האזור הזה מהאתר.";
-        return "- [" + id + "] " + label + ':\n  לפני: "' + htmlToReadable(originals[id] || "") + '"\n  אחרי: "' + htmlToReadable(edits[id].html) + '"';
+        return "- [" + id + "] " + label + ':\n  לפני: "' + htmlToReadable(originals[id] || "") + '"\n  אחרי: "' + htmlToReadable(edits[id].html || "") + '"';
       });
       text =
         "עדכני בבקשה את תוכן האתר (site.ts, וגם קבצי preview הרלוונטיים) לפי השינויים הבאים שערכתי בעורך הוויזואלי באתר:\n\n" +
@@ -609,6 +615,25 @@ document.getElementById("listings-track").innerHTML = LISTINGS.map(p => `
   captureOriginals();
   applyEdits();
   save();
+})();
+</script>
+
+<!-- ============ CONSENT BANNER ============ -->
+<div id="consentBanner" class="fixed inset-x-0 bottom-0 z-40 hidden border-t border-ink-10 bg-ink-12/95 backdrop-blur-md">
+  <div class="mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-4 py-4 sm:flex-row sm:justify-between sm:px-8 lg:px-16">
+    <p class="text-sm leading-[1.6] text-ink-6">האתר משתמש באחסון מקומי בדפדפן לצורך תפעולו. בהמשך הגלישה אתם מסכימים למדיניות הפרטיות שלנו. <a href="privacy.html" class="underline underline-offset-4 transition-colors hover:text-brand">למדיניות הפרטיות</a></p>
+    <button id="consentAccept" type="button" class="btn-inner-brand relative shrink-0 rounded-lg bg-brand px-6 py-2.5 text-sm font-bold text-white transition-transform duration-200 hover:-translate-y-0.5">אישור</button>
+  </div>
+</div>
+<script>
+(function () {
+  const KEY = "doron-privacy-consent";
+  const banner = document.getElementById("consentBanner");
+  try { if (!localStorage.getItem(KEY)) banner.classList.remove("hidden"); } catch (e) {}
+  document.getElementById("consentAccept").addEventListener("click", () => {
+    try { localStorage.setItem(KEY, "1"); } catch (e) {}
+    banner.classList.add("hidden");
+  });
 })();
 </script>
 </body>

@@ -1,4 +1,5 @@
 import { GoogleG } from "@/components/site/Icons";
+import { renderBold } from "@/components/site/RichText";
 import { about, aboutPage } from "@/data/site";
 
 export function StoryValues() {
@@ -16,7 +17,7 @@ export function StoryValues() {
         </div>
 
         <div className="flex flex-col items-start gap-6 lg:w-[707px] lg:shrink-0">
-          <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">{story.bio}</p>
+          <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">{renderBold(story.bio)}</p>
 
           <figure className="flex w-full flex-col gap-6 rounded-2xl border border-ink-10 p-6 sm:flex-row sm:items-start sm:p-6">
             <div
@@ -36,7 +37,7 @@ export function StoryValues() {
             </div>
           </figure>
 
-          <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">{about.paragraph}</p>
+          <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">{renderBold(about.paragraph)}</p>
 
           <div className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
             <p>{story.valuesIntro}</p>

@@ -1,3 +1,4 @@
+import { renderBold } from "@/components/site/RichText";
 import { about, aboutPage } from "@/data/site";
 
 export function AboutHero() {
@@ -16,7 +17,7 @@ export function AboutHero() {
             {aboutPage.hero.titleLine2}
           </h1>
           <p className="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
-            {about.paragraph}
+            {renderBold(about.paragraph)}
           </p>
         </div>
 

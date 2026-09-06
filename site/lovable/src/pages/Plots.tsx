@@ -1,3 +1,4 @@
+import { ConsentBanner } from "@/components/site/ConsentBanner";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
@@ -17,6 +18,7 @@ const Plots = () => {
         <CtaBanner />
       </main>
       <Footer />
+      <ConsentBanner />
     </div>
   );
 };

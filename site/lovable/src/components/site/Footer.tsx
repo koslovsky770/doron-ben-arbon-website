@@ -90,8 +90,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-ink-10 bg-ink-12">
-        <div className="mx-auto max-w-[1440px] px-4 py-6 sm:px-8 lg:px-16">
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-16">
           <p className="text-sm text-ink-7">{footer.rights}</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-ink-7">
+            {footer.legalLinks.map((link) => (
+              <a key={link.href} href={link.href} className="transition-colors hover:text-brand">
+                {link.label}
+              </a>
+            ))}
+            <a
+              href={footer.credit.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-brand"
+            >
+              {footer.credit.label}
+            </a>
+          </div>
         </div>
       </div>
     </footer>

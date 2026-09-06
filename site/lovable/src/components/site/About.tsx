@@ -1,4 +1,5 @@
 import { SpiroRing } from "@/components/site/Icons";
+import { renderBold } from "@/components/site/RichText";
 import { about } from "@/data/site";
 
 function TiltedPhoto({
@@ -59,7 +60,7 @@ export function About() {
         </h2>
 
         <p className="mx-auto mt-7 max-w-[789px] text-[17px] leading-[1.6] text-white/85 sm:text-lg">
-          {about.paragraph}
+          {renderBold(about.paragraph)}
         </p>
 
         <a

@@ -1,4 +1,5 @@
 import { RoundArrowMark } from "@/components/site/Icons";
+import { ConsentBanner } from "@/components/site/ConsentBanner";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
 import { GoogleReviews } from "@/components/site/GoogleReviews";
@@ -32,6 +33,7 @@ const TestimonialsPage = () => {
         <CtaBanner />
       </main>
       <Footer />
+      <ConsentBanner />
     </div>
   );
 };
