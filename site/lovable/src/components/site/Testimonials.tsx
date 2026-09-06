@@ -1,15 +1,17 @@
-import { testimonialsSection } from "@/data/site";
+import { testimonialsSection, type Testimonial } from "@/data/site";
 
 /**
- * Secondary social proof: the three verified quotes from the printed
- * prospectus (business clients). The primary block is <GoogleReviews />.
+ * Secondary social proof: verified business-client quotes (prospectus +
+ * old-site testimonials). The primary block is <GoogleReviews />.
+ * Defaults to the homepage's compact 3-quote set; the /testimonials page
+ * passes the full list instead.
  */
-export function Testimonials() {
+export function Testimonials({ items = testimonialsSection.items }: { items?: readonly Testimonial[] }) {
   return (
     <section id="testimonials" className="relative z-10 pb-20 lg:pb-[88px]">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          {testimonialsSection.items.map((item) => (
+          {items.map((item) => (
             <figure
               key={item.id}
               className="flex flex-col gap-5 rounded-2xl border border-ink-10 bg-ink-13 p-6"
@@ -25,7 +27,9 @@ export function Testimonials() {
                   <span className="block truncate text-[15px] font-bold text-ink-4">
                     {item.author}
                   </span>
-                  <span className="block truncate text-[13px] text-ink-7">{item.role}</span>
+                  {item.role && (
+                    <span className="block truncate text-[13px] text-ink-7">{item.role}</span>
+                  )}
                 </figcaption>
               </div>
 

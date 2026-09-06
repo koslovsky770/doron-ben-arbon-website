@@ -308,7 +308,15 @@ export const googleReviewsSection = {
   allReviewsLabel: "לכל הביקורות בגוגל",
 };
 
-export const testimonialsSection = {
+export type Testimonial = {
+  id: string;
+  quote: string;
+  author: string;
+  role?: string;
+  initials: string;
+};
+
+export const testimonialsSection: { items: Testimonial[] } = {
   items: [
     {
       id: "greenblatt",
@@ -335,6 +343,61 @@ export const testimonialsSection = {
       initials: "יב",
     },
   ],
+};
+
+/**
+ * המלצות נוספות מהאתר הישן (לא מהפרוספקט הרשמי) — לשימוש בעמוד /testimonials
+ * המלא, לצד שלוש המלצות הפרוספקט שכבר מוצגות גם בדף הבית. תוקנו רק רווחים
+ * ופיסוק, בלי לשנות תוכן — כמו הביקורות בגוגל למעלה.
+ */
+export const additionalTestimonials: Testimonial[] = [
+  {
+    id: "gvirtz",
+    quote:
+      "אמינות והגינות שטרם נתקלנו בהם, ובמיוחד דורון נעים ההליכות שליווה אותנו לכל אורך הדרך והפך עולמות בשבילנו. הלוואי שירבו עוד עסקים טובים וישרים כמו אלו.",
+    author: "שמעון גבירץ",
+    initials: "שג",
+  },
+  {
+    id: "brecher",
+    // הטקסט הזה הופיע חלקי/לא ברור גם באתר הישן — הושאר כפי שהוא, בלי להשלים מילים.
+    quote:
+      "בתור מעצבת פנים יצא לי להכיר את דורון, אחד האנשים, ביקש ממני לכמה עזרה לקוחות שלו..",
+    author: "אסתי ברכר",
+    initials: "אב",
+  },
+  {
+    id: "kleinman",
+    quote:
+      "מתווך הכי אמין וישר שאני מכיר, שולט חזק בתחום הנדל״ן, חניות ועסקי, מומלץ מאד גם לבעלי עסקים.",
+    author: "עוזיאל קליינמן",
+    initials: "עק",
+  },
+  {
+    id: "nechemad",
+    quote:
+      "לדעתי משרד תיווך מהמובילים בבני ברק, שירות ברמה גבוהה, ובמיוחד ביותר מומלץ עם אדם כמו דורון מנהל המשרד שהוא נותן שירות מכל הלב ובצורה מקצועית מאד עם ליווי עד לסיום העסקה.",
+    author: "יצחק נחמד",
+    initials: "ין",
+  },
+  {
+    id: "schwartz",
+    quote: "יש לציין שקיבלנו שרות מעולה, אדיב אמין ומהיר, ממליץ בחום.",
+    author: "יצחק שוורץ",
+    initials: "יש",
+  },
+  {
+    id: "bukris",
+    quote:
+      "שירות ברמה גבוהה ללקוח, ענה על הציפיות, רואים שהמקום עתיר נסיון, אדיבות, הבנת צרכי הלקוח, פתרון אישי ותואם. תודה רבה לכם.",
+    author: "עדן בוכריס",
+    initials: "עב",
+  },
+];
+
+export const testimonialsPage = {
+  title: "ממליצים עלינו",
+  paragraph: "לקוחות ועסקים שליווינו לאורך השנים, בלשונם שלהם — וגם מה שכותבים עלינו בגוגל.",
 };
 
 export const ctaSection = {
