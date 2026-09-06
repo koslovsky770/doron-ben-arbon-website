@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>אודות דורון בן ארבון — תיווך מסחרי בבני ברק</title>
-<meta name="description" content="דורון בן ארבון: מעל 15 שנות ניסיון בתיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. הסיפור, הערכים והמספרים." />
+<title>מגרשים — דורון בן ארבון, בני ברק</title>
+<meta name="description" content="איתור ותיווך מגרשים לבנייה ולהשקעה בבני ברק ובסביבה, עם דורון בן ארבון." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -41,8 +41,6 @@ tailwind.config = {
 };
 </script>
 <style>
-  /* Polin — brand face. Two cuts only, so weight ranges map every Tailwind
-     font-weight onto a real file and prevent a synthesised faux bold. */
   @font-face {
     font-family: "Polin";
     src: url("../lovable/public/fonts/Polin-Regular.woff2") format("woff2"),
@@ -82,12 +80,12 @@ tailwind.config = {
       </span>
     </a>
 
-    <ul class="hidden items-center gap-[18px] xl:flex xl:gap-[30px]">
+    <ul class="hidden items-center gap-[14px] xl:flex xl:gap-[22px]">
       <li><a href="index.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">דף בית</a></li>
       <li><a href="commercial.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
       <li><a href="project-marketing.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
-      <li><a href="plots.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
-      <li><a href="about.html" aria-current="page" class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-6 py-4 text-base font-medium text-ink-4">אודות</a></li>
+      <li><a href="plots.html" aria-current="page" class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-6 py-4 text-base font-medium text-ink-4">מגרשים</a></li>
+      <li><a href="about.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">אודות</a></li>
       <li><a href="testimonials.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">המלצות</a></li>
       <li><a href="contact.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">צור קשר</a></li>
     </ul>
@@ -108,8 +106,8 @@ tailwind.config = {
       <li><a href="index.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">דף בית</a></li>
       <li><a href="commercial.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">תיווך מסחרי</a></li>
       <li><a href="project-marketing.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">שיווק פרויקטים</a></li>
-      <li><a href="plots.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">מגרשים</a></li>
-      <li><a href="about.html" class="block rounded-lg border border-ink-10 bg-ink-12 px-5 py-4 text-lg font-medium text-ink-4">אודות</a></li>
+      <li><a href="plots.html" class="block rounded-lg border border-ink-10 bg-ink-12 px-5 py-4 text-lg font-medium text-ink-4">מגרשים</a></li>
+      <li><a href="about.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">אודות</a></li>
       <li><a href="testimonials.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">המלצות</a></li>
       <li><a href="contact.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">צור קשר</a></li>
     </ul>
@@ -121,105 +119,34 @@ tailwind.config = {
 </header>
 
 <main>
-<!-- ============ ABOUT HERO ============ -->
+<!-- ============ HERO ============ -->
 <section class="relative overflow-x-clip bg-ink-13">
   <div aria-hidden class="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-gradient-to-b from-transparent to-black/50 lg:h-[560px]"></div>
 
   <div class="relative mx-auto max-w-[1440px] px-4 pb-14 pt-12 sm:px-8 lg:px-16 lg:pb-[66px] lg:pt-24">
     <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2">מתווך בין<br />נכסים לאנשים.</h1>
-      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">במקום לרוץ בין נכסים, להתלבט אם המחיר נכון ולחשוש ממה שלא ידעתם לבדוק — אתם מקבלים ליווי מקצועי ממי שחי את השוק כבר מעל 15 שנה, מכיר את המחירים, את האזורים ואת העסקאות, ודואג שתוכלו להיכנס לעסקה בראש שקט.</p>
+      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2">מגרשים<br />לבנייה ולהשקעה בבני ברק.</h1>
+      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות. (טקסט לדוגמה — יעודכן מול דורון.)</p>
     </div>
 
-    <div class="mt-8 flex flex-col gap-2 sm:flex-row lg:mt-[66px]">
-      <div class="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:h-[484px] lg:flex-1">
-        <img src="../lovable/public/images/about-hero-office.jpg" alt="משרד התיווך של דורון בן ארבון בבני ברק" class="h-full w-full object-cover object-center" />
-      </div>
-      <div class="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:h-[484px] lg:w-[368px] lg:shrink-0">
-        <img src="../lovable/public/images/about-hero-doron.jpg" alt="דורון בן ארבון במשרד התיווך" class="h-full w-full object-cover object-center" />
-      </div>
+    <div class="mt-8 h-[220px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:mt-[66px] lg:h-[639px]">
+      <img src="../lovable/public/images/svc-plots.jpg" alt="מגרשים לבנייה ולהשקעה בבני ברק" class="h-full w-full object-cover object-center" />
     </div>
   </div>
 </section>
 
-<!-- ============ STORY & VALUES ============ -->
+<!-- ============ LISTINGS (placeholder content) ============ -->
 <section class="relative z-10 bg-ink-13">
   <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-4 py-16 sm:px-8 lg:flex-row lg:gap-[120px] lg:px-16 lg:py-[88px]">
-    <div class="lg:flex-1">
-      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2">הסיפור<br />והערכים שלי</h2>
+    <div class="flex flex-col items-start gap-6 lg:w-[360px] lg:shrink-0">
+      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2">מגרשים<br />להשקעה</h2>
+      <a href="#" data-wa class="btn-inner-brand relative flex w-full items-center justify-center rounded-lg bg-brand px-6 py-5 text-lg font-bold text-white">דברו איתי בוואטסאפ</a>
     </div>
 
-    <div class="flex flex-col items-start gap-6 lg:w-[707px] lg:shrink-0">
-      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">שמי דורון בן ארבון. אני מלווה בעלי עסקים ויזמים בבני ברק כבר למעלה מ־15 שנה — בתחומי התיווך המסחרי, שיווק פרויקטים ומגרשים. בס״ד ליוויתי עשרות עסקאות של מכירה, השכרה ותיווך עסקים, מהחנות הקטנה ברחוב ועד לבניינים שלמים.</p>
+    <div class="flex flex-1 flex-col gap-10 lg:gap-14">
+      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">עדיין לא עלו לכאן עסקאות מגרשים אמיתיות. שלושת הבלוקים למטה הם תוכן דמה זמני להדגמת המבנה, ויוחלפו בעסקאות אמיתיות ברגע שיתקבלו מדורון.</p>
 
-      <figure class="flex w-full flex-col gap-6 rounded-2xl border border-ink-10 p-6 sm:flex-row sm:items-start">
-        <div aria-hidden class="flex h-[100px] w-[100px] shrink-0 items-center justify-center rounded-2xl bg-brand font-display text-3xl font-bold text-white">G</div>
-        <div class="flex flex-1 flex-col gap-4">
-          <blockquote class="text-xl font-bold leading-[1.5] text-ink-4">&quot;איש מדהים ויקר שמלווה אותך עד לחתימה ודואג ללקוח הכי הרבה. נאמן, אמין, דיסקרטי וישר.&quot;</blockquote>
-          <figcaption class="flex items-center gap-2 text-base text-ink-6">
-            <svg viewBox="0 0 48 48" class="h-4 w-4 shrink-0" aria-hidden><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-            Glory office · ביקורת בגוגל
-          </figcaption>
-        </div>
-      </figure>
-
-      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">במקום לרוץ בין נכסים, להתלבט אם המחיר נכון ולחשוש ממה שלא ידעתם לבדוק — אתם מקבלים ליווי מקצועי ממי שחי את השוק כבר מעל 15 שנה, מכיר את המחירים, את האזורים ואת העסקאות, ודואג שתוכלו להיכנס לעסקה בראש שקט.</p>
-
-      <div class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
-        <p>אלה הערכים שמובילים אותי בכל עסקה:</p>
-        <ul class="mt-4 flex flex-col gap-3">
-          <li class="flex gap-3"><span aria-hidden class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span><span><span class="font-bold text-ink-4">בקיאות חסרת פשרות</span> — הכרות מעמיקה של כל מטר רבוע בבני ברק, לצורך קידום השכרה ומכירה מדויקים ומהירים.</span></li>
-          <li class="flex gap-3"><span aria-hidden class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span><span><span class="font-bold text-ink-4">יושר ואמינות לפני הכל</span> — מבטלים עסקה בכל שלב אם משהו לא מרגיש נכון או מתאים ללקוח.</span></li>
-          <li class="flex gap-3"><span aria-hidden class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span><span><span class="font-bold text-ink-4">ליווי מלא ואישי</span> — ייעוץ בתמחור ומימון, חיבור לאנשי מקצוע (עו״ד, אדריכלית), עד לקבלת המפתח.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ACHIEVEMENTS ============ -->
-<section class="relative z-10 py-16 lg:py-[88px]">
-  <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
-    <div class="mx-auto max-w-[900px] text-center">
-      <div class="flex items-center justify-center gap-4">
-        <h2 class="font-display text-d2 font-bold tracking-tight text-ink-2">בקצרה, במספרים</h2>
-        <svg viewBox="0 0 40 40" fill="none" class="h-8 w-8 shrink-0 text-brand" aria-hidden><g stroke="currentColor" stroke-width="5.5" stroke-linecap="round"><path d="M20 4 V36"/><path d="M6.1 12 L33.9 28"/><path d="M6.1 28 L33.9 12"/></g></svg>
-      </div>
-      <p class="mx-auto mt-5 max-w-[600px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">כל מספר כאן מייצג עסקה אמיתית, לקוח מרוצה ועבודה משותפת לאורך זמן.</p>
-    </div>
-
-    <div class="mx-auto mt-10 grid max-w-[1312px] grid-cols-2 gap-2 lg:mt-12 lg:grid-cols-4">
-      <div class="flex h-24 flex-col justify-center gap-2 rounded-lg border border-ink-10 px-4 py-3 sm:px-6">
-        <p class="font-display text-h6 font-bold leading-none text-ink-2">+15</p>
-        <p class="text-sm font-medium leading-[1.4] text-ink-6 sm:text-base">שנות ניסיון בנדל״ן מסחרי</p>
-      </div>
-      <div class="flex h-24 flex-col justify-center gap-2 rounded-lg border border-ink-10 px-4 py-3 sm:px-6">
-        <p class="font-display text-h6 font-bold leading-none text-ink-2">1:1</p>
-        <p class="text-sm font-medium leading-[1.4] text-ink-6 sm:text-base">ליווי אישי לאורך כל העסקה</p>
-      </div>
-      <div class="flex h-24 flex-col justify-center gap-2 rounded-lg border border-ink-10 px-4 py-3 sm:px-6">
-        <p class="font-display text-h6 font-bold leading-none text-ink-2">+125</p>
-        <p class="text-sm font-medium leading-[1.4] text-ink-6 sm:text-base">חנויות ומשרדים שהושכרו</p>
-      </div>
-      <div class="flex h-24 flex-col justify-center gap-2 rounded-lg border border-ink-10 px-4 py-3 sm:px-6">
-        <p class="font-display text-h6 font-bold leading-none text-ink-2">5.0</p>
-        <p class="text-sm font-medium leading-[1.4] text-ink-6 sm:text-base">דירוג ב־23 ביקורות בגוגל</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="relative z-10 pt-4 lg:pt-6">
-  <div class="mx-auto max-w-[1440px] px-4 pb-10 text-center sm:px-8 lg:px-16">
-    <div class="flex items-center justify-center gap-4">
-      <h2 class="font-display text-d2 font-bold tracking-tight text-ink-2">מה אומרים עלינו</h2>
-      <svg viewBox="0 0 100 100" fill="none" class="h-8 w-8 shrink-0 text-brand" aria-hidden><path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </div>
-  </div>
-  <div class="relative z-10 pb-20 lg:pb-[88px]">
-    <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
-      <div id="testi-grid" class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      <div id="listings-track" class="flex flex-col gap-10 lg:gap-14"></div>
     </div>
   </div>
 </section>
@@ -316,7 +243,6 @@ const WA = "https://wa.me/972544980159?text=" + encodeURIComponent("היי דו�
 document.querySelectorAll("[data-wa]").forEach(a => { a.href = WA; a.target = "_blank"; a.rel = "noopener noreferrer"; });
 document.getElementById("rights").textContent = "© " + new Date().getFullYear() + " דורון בן ארבון — תיווך מסחרי. כל הזכויות שמורות.";
 
-/* spirograph rosettes */
 const NS = "http://www.w3.org/2000/svg";
 document.querySelectorAll("[data-spiro]").forEach(svg => {
   const n = +svg.dataset.spiro;
@@ -330,7 +256,6 @@ document.querySelectorAll("[data-spiro]").forEach(svg => {
   }
 });
 
-/* mobile menu */
 const menuBtn = document.getElementById("menuBtn"), drawer = document.getElementById("drawer");
 const ICON_MENU = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>`;
 const ICON_X = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5"><path d="M18 6 6 18M6 6l12 12"/></svg>`;
@@ -347,23 +272,20 @@ addEventListener("scroll", () => {
   document.getElementById("hdr").classList.toggle("backdrop-blur-md", scrollY > 8);
 }, { passive: true });
 
-/* business testimonials (same 3 verified quotes as the homepage) */
-const TESTIS = [
-  { q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
-  { q:"״דורון תרם רבות להצלחתו של הפרויקט. היחס המיוחד שלו והליווי גם לאחר חתימת החוזה יוצאים מגדר הרגיל — ללא צל של ספק הייתי פונה אליו לכל פרויקט בבני ברק.״", a:"שי פסל", r:"גרסטנפלד הנדסה ובניין בע״מ", n:"שפ" },
-  { q:"״אחד המשרדים החזקים והמומלצים בבני ברק. 100% אמינות, ליווי אישי ומקצועי, התמצאות במחירי השוק וליווי עד לחתימת החוזה. אנחנו מרוצים מאוד מהעבודה איתו.״", a:"יוסף בן פז", r:"מנכ״ל, יגאל נכסים", n:"יב" }
+/* תוכן דמה זמני — ראו הערה ב-site.ts (plotsPage.listings.placeholder) */
+const PLACEHOLDER = [
+  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." },
+  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." },
+  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." }
 ];
-document.getElementById("testi-grid").innerHTML = TESTIS.map(t => `
-  <figure class="flex flex-col gap-5 rounded-2xl border border-ink-10 bg-ink-13 p-6">
-    <div class="flex items-center gap-3">
-      <div aria-hidden class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand font-display text-base font-bold text-white">${t.n}</div>
-      <figcaption class="min-w-0">
-        <span class="block truncate text-[15px] font-bold text-ink-4">${t.a}</span>
-        <span class="block truncate text-[13px] text-ink-7">${t.r}</span>
-      </figcaption>
+document.getElementById("listings-track").innerHTML = PLACEHOLDER.map(p => `
+  <article class="flex flex-col gap-4">
+    <h3 class="font-display text-h6 font-bold leading-none text-ink-2">${p.t}</h3>
+    <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">${p.d}</p>
+    <div class="flex h-[240px] w-full items-center justify-center rounded-2xl border border-dashed border-ink-10 bg-ink-12 sm:h-[320px] lg:h-[372px]">
+      <span class="text-sm text-ink-7">תמונה תתווסף בהמשך</span>
     </div>
-    <blockquote class="text-[15px] leading-[1.6] text-ink-6">${t.q}</blockquote>
-  </figure>`).join("");
+  </article>`).join("");
 </script>
 </body>
 </html>

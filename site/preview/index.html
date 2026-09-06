@@ -86,10 +86,11 @@ tailwind.config = {
     <ul class="hidden items-center gap-[18px] xl:flex xl:gap-[30px]">
       <li><a href="#" aria-current="page" class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-6 py-4 text-base font-medium text-ink-4">דף בית</a></li>
       <li><a href="commercial.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
-      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
-      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
+      <li><a href="project-marketing.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
+      <li><a href="plots.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
       <li><a href="about.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">אודות</a></li>
       <li><a href="testimonials.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">המלצות</a></li>
+      <li><a href="contact.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">צור קשר</a></li>
     </ul>
 
     <div class="flex items-center gap-2">
@@ -107,10 +108,11 @@ tailwind.config = {
     <ul class="flex flex-col gap-2">
       <li><a href="#" class="block rounded-lg border border-ink-10 bg-ink-12 px-5 py-4 text-lg font-medium text-ink-4">דף בית</a></li>
       <li><a href="commercial.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">תיווך מסחרי</a></li>
-      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">שיווק פרויקטים</a></li>
-      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">מגרשים</a></li>
+      <li><a href="project-marketing.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">שיווק פרויקטים</a></li>
+      <li><a href="plots.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">מגרשים</a></li>
       <li><a href="about.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">אודות</a></li>
       <li><a href="testimonials.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">המלצות</a></li>
+      <li><a href="contact.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">צור קשר</a></li>
     </ul>
     <div class="mt-6 grid grid-cols-2 gap-3">
       <a href="tel:+972544980159" class="btn-inner-brand relative flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white">התקשרו עכשיו</a>
@@ -350,6 +352,7 @@ tailwind.config = {
         <li><a href="about.html" class="text-base text-ink-4 transition-colors hover:text-brand">אודות</a></li>
         <li><a href="#projects" class="text-base text-ink-4 transition-colors hover:text-brand">פרויקטים</a></li>
         <li><a href="testimonials.html" class="text-base text-ink-4 transition-colors hover:text-brand">המלצות</a></li>
+        <li><a href="contact.html" class="text-base text-ink-4 transition-colors hover:text-brand">צור קשר</a></li>
       </ul>
     </nav>
 
@@ -357,8 +360,8 @@ tailwind.config = {
       <h2 class="text-lg font-medium text-ink-7">תחומי פעילות</h2>
       <ul class="mt-6 flex flex-col gap-4">
         <li><a href="commercial.html" class="text-base text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
-        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
-        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
+        <li><a href="project-marketing.html" class="text-base text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
+        <li><a href="plots.html" class="text-base text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
       </ul>
     </nav>
 
@@ -435,8 +438,8 @@ const PROJECTS = [
 const FILTERS = [["all","הכל"],["commercial","תיווך מסחרי"],["project-marketing","שיווק פרויקטים"],["plots","מגרשים"]];
 const SERVICES = [
   { t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק - איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg", href:"commercial.html" },
-  { t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg", href:"#services" },
-  { t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg", href:"#services" }
+  { t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg", href:"project-marketing.html" },
+  { t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg", href:"plots.html" }
 ];
 const TESTIS = [
   { q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
