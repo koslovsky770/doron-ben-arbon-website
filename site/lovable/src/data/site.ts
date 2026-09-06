@@ -126,6 +126,28 @@ export const aboutPage = {
   },
 } as const;
 
+/**
+ * עמוד תיווך מסחרי — לפי מסמך האיפיון (סעיף "עמוד: תיווך מסחרי") ותבנית ה-Figma
+ * (סקשן "Service"). התוכן: הסבר קצר על התחום + הפרויקטים שכבר מוגדרים למטה
+ * בקטגוריה commercial — אין כאן תוכן פרויקטים חדש, רק כותרות ופסקאות.
+ */
+export const commercialPage = {
+  hero: {
+    titleLine1: "תיווך מסחרי",
+    titleLine2: "בבני ברק — נכון מהיסוד.",
+    paragraph:
+      "חנויות, משרדים, מחסנים ושטחי מסחר — איתור, תמחור ומשא ומתן עד לחתימה, מתוך היכרות של מעל 15 שנה עם השוק המקומי ועם כל מטר רבוע בעיר.",
+    image: "/images/svc-commercial.jpg",
+  },
+  listings: {
+    titleLine1: "תיווך",
+    titleLine2: "מסחרי",
+    paragraph:
+      "חלק מהעסקאות שליווינו בתחום: חנויות, מחסנים ומשרדים שהושכרו ונמכרו לבעלי עסקים ויזמים ברחבי בני ברק. לכל עסקה יש את הסיפור שלה, ולכל עסק את ההתאמה הנכונה עבורו.",
+    cta: { label: "דברו איתי בוואטסאפ", href: site.whatsapp },
+  },
+} as const;
+
 export type ProjectCategory = "commercial" | "project-marketing" | "plots";
 
 export const projectFilters: { id: ProjectCategory | "all"; label: string }[] = [

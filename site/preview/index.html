@@ -85,7 +85,7 @@ tailwind.config = {
 
     <ul class="hidden items-center gap-[18px] xl:flex xl:gap-[30px]">
       <li><a href="#" aria-current="page" class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-6 py-4 text-base font-medium text-ink-4">דף בית</a></li>
-      <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
+      <li><a href="commercial.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
       <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
       <li><a href="#services" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
       <li><a href="about.html" class="whitespace-nowrap text-base font-medium text-ink-4 transition-colors hover:text-brand">אודות</a></li>
@@ -106,7 +106,7 @@ tailwind.config = {
   <div id="drawer" class="fixed inset-x-0 bottom-0 top-[84px] z-50 hidden overflow-y-auto border-t border-ink-10 bg-ink-13 px-4 pb-10 pt-6 xl:hidden">
     <ul class="flex flex-col gap-2">
       <li><a href="#" class="block rounded-lg border border-ink-10 bg-ink-12 px-5 py-4 text-lg font-medium text-ink-4">דף בית</a></li>
-      <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">תיווך מסחרי</a></li>
+      <li><a href="commercial.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">תיווך מסחרי</a></li>
       <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">שיווק פרויקטים</a></li>
       <li><a href="#services" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">מגרשים</a></li>
       <li><a href="about.html" class="block rounded-lg border border-transparent px-5 py-4 text-lg font-medium text-ink-6 hover:border-ink-10 hover:bg-ink-12">אודות</a></li>
@@ -356,7 +356,7 @@ tailwind.config = {
     <nav aria-label="תחומי פעילות">
       <h2 class="text-lg font-medium text-ink-7">תחומי פעילות</h2>
       <ul class="mt-6 flex flex-col gap-4">
-        <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
+        <li><a href="commercial.html" class="text-base text-ink-4 transition-colors hover:text-brand">תיווך מסחרי</a></li>
         <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">שיווק פרויקטים</a></li>
         <li><a href="#services" class="text-base text-ink-4 transition-colors hover:text-brand">מגרשים</a></li>
       </ul>
@@ -434,9 +434,9 @@ const PROJECTS = [
 ];
 const FILTERS = [["all","הכל"],["commercial","תיווך מסחרי"],["project-marketing","שיווק פרויקטים"],["plots","מגרשים"]];
 const SERVICES = [
-  { t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק - איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg" },
-  { t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg" },
-  { t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg" }
+  { t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק - איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg", href:"commercial.html" },
+  { t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg", href:"#services" },
+  { t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg", href:"#services" }
 ];
 const TESTIS = [
   { q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
@@ -455,7 +455,7 @@ document.getElementById("services-grid").innerHTML = SERVICES.map(s => `
       <h3 class="font-display text-d3 font-bold text-ink-4">${s.t}</h3>
       <p class="text-base leading-[1.5] text-ink-6">${s.d}</p>
     </div>
-    <a href="#" class="inline-flex items-center gap-2 self-start text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand">קראו עוד…
+    <a href="${s.href}" class="inline-flex items-center gap-2 self-start text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand">קראו עוד…
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
     </a>
   </article>`).join("");
