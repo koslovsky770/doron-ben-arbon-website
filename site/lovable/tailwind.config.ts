@@ -77,6 +77,9 @@ export default {
         d1: ["clamp(2.5rem, 6.39vw, 5.75rem)", { lineHeight: "1" }],
         d2: ["clamp(1.875rem, 4.1vw, 3.6875rem)", { lineHeight: "1.05" }],
         d3: ["clamp(1.25rem, 1.67vw, 1.5rem)", { lineHeight: "1.2" }],
+        // Added for the About page (Figma "About us" template): H3 73 / H6 38
+        h3: ["clamp(2rem, 5.07vw, 4.5625rem)", { lineHeight: "1.05" }],
+        h6: ["clamp(1.125rem, 2.64vw, 2.375rem)", { lineHeight: "1" }],
       },
       borderRadius: {
         lg: "var(--radius)",
