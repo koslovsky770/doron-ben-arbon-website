@@ -125,8 +125,8 @@ tailwind.config = {
 
   <div class="relative mx-auto max-w-[1440px] px-4 pb-14 pt-12 sm:px-8 lg:px-16 lg:pb-[66px] lg:pt-24">
     <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2">שיווק פרויקטים<br />בבני ברק — מהתכנון ועד לאכלוס.</h1>
-      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">ליווי ושיווק פרויקטים חדשים — בניינים ומתחמים עבור יזמים, מוסדות ורשויות, מהשיווק הראשוני ועד לאכלוס מלא, מתוך הכרות עמוקה עם השוק המקומי בבני ברק.</p>
+      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="projectMarketingPage.hero.title" data-edit-label="כותרת ראשית (הירו)">שיווק פרויקטים<br />בבני ברק — מהתכנון ועד לאכלוס.</h1>
+      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="projectMarketingPage.hero.paragraph" data-edit-label="פסקת הירו">ליווי ושיווק פרויקטים חדשים — בניינים ומתחמים עבור יזמים, מוסדות ורשויות, מהשיווק הראשוני ועד לאכלוס מלא, מתוך הכרות עמוקה עם השוק המקומי בבני ברק.</p>
     </div>
 
     <div class="mt-8 h-[220px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:mt-[66px] lg:h-[639px]">
@@ -139,12 +139,12 @@ tailwind.config = {
 <section class="relative z-10 bg-ink-13">
   <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-4 py-16 sm:px-8 lg:flex-row lg:gap-[120px] lg:px-16 lg:py-[88px]">
     <div class="flex flex-col items-start gap-6 lg:w-[360px] lg:shrink-0">
-      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2">שיווק<br />פרויקטים</h2>
-      <a href="#" data-wa class="btn-inner-brand relative flex w-full items-center justify-center rounded-lg bg-brand px-6 py-5 text-lg font-bold text-white">דברו איתי בוואטסאפ</a>
+      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="projectMarketingPage.listings.title" data-edit-label="כותרת בצד">שיווק<br />פרויקטים</h2>
+      <a href="#" data-wa class="btn-inner-brand relative flex w-full items-center justify-center rounded-lg bg-brand px-6 py-5 text-lg font-bold text-white" data-edit="projectMarketingPage.listings.cta.label" data-edit-label="כפתור וואטסאפ (צד)">דברו איתי בוואטסאפ</a>
     </div>
 
     <div class="flex flex-1 flex-col gap-10 lg:gap-14">
-      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">חלק מהפרויקטים ששיווקנו: בניינים, מתחמי מגורים ומסחר ומבנים ציבוריים ברחבי בני ברק. מהתכנון הראשוני ועד לאכלוס מלא, בליווי צמוד לאורך כל הדרך.</p>
+      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="projectMarketingPage.listings.paragraph" data-edit-label="פסקת פתיחה">חלק מהפרויקטים ששיווקנו: בניינים, מתחמי מגורים ומסחר ומבנים ציבוריים ברחבי בני ברק. מהתכנון הראשוני ועד לאכלוס מלא, בליווי צמוד לאורך כל הדרך.</p>
 
       <div id="listings-track" class="flex flex-col gap-10 lg:gap-14"></div>
     </div>
@@ -158,11 +158,11 @@ tailwind.config = {
     <svg data-spiro="26" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute -right-[18%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 text-white/25"></svg>
     <div class="relative">
       <h2 class="mx-auto max-w-[900px] font-display text-d1 font-extrabold leading-[1.05] tracking-tight text-white">
-        בואו נמצא<span aria-hidden class="mx-3 inline-block h-[0.4em] w-[1.15em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span>את הנכס<br />הבא שלכם
+        <span data-edit="ctaSection.title" data-edit-label="כותרת CTA תחתון">בואו נמצא<span aria-hidden class="mx-3 inline-block h-[0.4em] w-[1.15em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span>את הנכס<br />הבא שלכם</span>
       </h2>
       <a href="#" data-wa class="mt-10 inline-flex h-[56px] items-center justify-center gap-2.5 rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-        דברו איתי בוואטסאפ
+        <span data-edit="ctaSection.cta.label" data-edit-label="כפתור CTA תחתון">דברו איתי בוואטסאפ</span>
       </a>
     </div>
   </div>
@@ -273,19 +273,253 @@ addEventListener("scroll", () => {
 }, { passive: true });
 
 const LISTINGS = [
-  { t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", i:"proj-akiva101.jpg" },
-  { t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", i:"proj-akiva34.jpg" },
-  { t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", i:"proj-hazon12.jpg" }
+  { id:"akiva-101", t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", i:"proj-akiva101.jpg" },
+  { id:"akiva-34", t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", i:"proj-akiva34.jpg" },
+  { id:"hazon-ish-12", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", i:"proj-hazon12.jpg" }
 ];
 const IMG = "../lovable/public/images/";
 document.getElementById("listings-track").innerHTML = LISTINGS.map(p => `
-  <article class="flex flex-col gap-4">
-    <h3 class="font-display text-h6 font-bold leading-none text-ink-2">${p.t}</h3>
-    <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">${p.d}</p>
+  <article class="flex flex-col gap-4" data-edit-block>
+    <h3 class="font-display text-h6 font-bold leading-none text-ink-2" data-edit="projects.${p.id}.title" data-edit-label="כותרת פרויקט">${p.t}</h3>
+    <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="projects.${p.id}.description" data-edit-label="תיאור פרויקט">${p.d}</p>
     <div class="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] lg:h-[372px]">
       <img src="${IMG}${p.i}" alt="${p.t}" class="h-full w-full object-cover" loading="lazy" />
     </div>
   </article>`).join("");
+</script>
+
+<!-- ===== VISUAL TEXT EDITOR (site-wide) ===== -->
+<style>
+  .ve-mode [data-edit]{outline:1px dashed rgba(10,184,157,.55);outline-offset:3px;border-radius:4px;cursor:text;transition:background-color .15s}
+  .ve-mode [data-edit]:hover{background-color:rgba(10,184,157,.10)}
+  .ve-mode [data-edit]:focus{outline:2px solid #0AB89D;background-color:rgba(10,184,157,.14)}
+  #ve-fab{position:fixed;bottom:20px;left:20px;z-index:99999;background:#0AB89D;color:#fff;border:0;
+    border-radius:999px;padding:14px 22px;font:700 14px Assistant,system-ui,sans-serif;cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);direction:rtl}
+  #ve-fab.on{background:#161514;border:1px solid #282726}
+  #ve-panel{position:fixed;bottom:78px;left:20px;z-index:99998;width:290px;max-width:calc(100vw - 40px);
+    background:#161514;color:#F0F0F0;border:1px solid #282726;border-radius:14px;
+    box-shadow:0 12px 34px rgba(0,0,0,.45);padding:16px;font:13px Assistant,system-ui,sans-serif;
+    display:none;direction:rtl;text-align:right}
+  #ve-panel.open{display:block}
+  #ve-panel h4{margin:0 0 8px;font-size:15px;font-weight:700;color:#fff}
+  #ve-panel p{margin:0;color:#8D8D8C;line-height:1.5}
+  #ve-count-wrap{margin-top:10px}
+  #ve-count{color:#0AB89D;font-weight:700}
+  #ve-panel button{width:100%;border:0;border-radius:8px;padding:11px;font:700 13px Assistant,system-ui,sans-serif;cursor:pointer;margin-top:8px}
+  #ve-copy{background:#0AB89D;color:#fff}
+  #ve-reset{background:#282726;color:#F0F0F0}
+  #ve-pill{position:fixed;z-index:100000;background:#161514;color:#fff;border:1px solid #0AB89D;border-radius:8px;
+    padding:6px;font:600 12px Assistant,system-ui,sans-serif;display:none;align-items:center;gap:4px;
+    box-shadow:0 8px 20px rgba(0,0,0,.45);direction:rtl}
+  #ve-pill.show{display:flex}
+  #ve-pill-label{padding:0 6px;color:#C0C0BF;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis}
+  #ve-pill button{background:transparent;border:1px solid #282726;border-radius:6px;color:#F0F0F0;cursor:pointer;font:700 12px Assistant,system-ui,sans-serif;padding:5px 8px;white-space:nowrap}
+  #ve-pill button:hover{background:#282726}
+  #ve-pill-bold.active{background:#0AB89D;border-color:#0AB89D;color:#fff}
+  #ve-pill-del{color:#ff8a8a;border-color:#5c2626}
+</style>
+
+<button id="ve-fab" type="button">✎ עריכת טקסט</button>
+<aside id="ve-panel">
+  <h4>עריכת תוכן העמוד</h4>
+  <p>לחצי על כל טקסט עם מסגרת מקווקוות ותקלידי ישירות. אפשר להדגיש (B), למחוק אזור שלם (🗑) או לאפס שדה (↺). השינויים נשמרים בדפדפן הזה ומשותפים לכל עמודי האתר.</p>
+  <div id="ve-count-wrap"><span id="ve-count">0</span> שינויים ממתינים</div>
+  <button id="ve-copy" type="button">📋 העתיקי שינויים לקלוד</button>
+  <button id="ve-reset" type="button">↺ אפסי הכל</button>
+</aside>
+<div id="ve-pill">
+  <span id="ve-pill-label"></span>
+  <button id="ve-pill-bold" type="button" title="הדגשה (בולד)"><b>B</b></button>
+  <button id="ve-pill-del" type="button" title="מחיקת האזור">🗑</button>
+  <button id="ve-pill-reset" type="button" title="איפוס שדה">↺</button>
+</div>
+
+<script>
+(function () {
+  const STORAGE_KEY = "doron-site-edits-v1";
+  const fab = document.getElementById("ve-fab");
+  const panel = document.getElementById("ve-panel");
+  const countEl = document.getElementById("ve-count");
+  const pill = document.getElementById("ve-pill");
+  const pillLabel = document.getElementById("ve-pill-label");
+  const pillBold = document.getElementById("ve-pill-bold");
+  const pillDel = document.getElementById("ve-pill-del");
+  const pillReset = document.getElementById("ve-pill-reset");
+
+  let editMode = false;
+  let focusedId = null;
+  const originals = {}; // id -> original innerHTML
+  let edits = {};
+  try { edits = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { edits = {}; }
+
+  function blockFor(el) { return el.closest("[data-edit-block]") || el; }
+  function captureOriginals() {
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (!(id in originals)) originals[id] = el.innerHTML;
+    });
+  }
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+    countEl.textContent = Object.keys(edits).length;
+  }
+  function applyEdits() {
+    // two passes: a block with ANY deleted field must stay hidden even
+    // though its other fields (title vs. description, say) are processed
+    // separately and would otherwise reset display back to visible.
+    const hiddenBlocks = new Set();
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (edits[id] && edits[id].deleted) hiddenBlocks.add(blockFor(el));
+    });
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      const block = blockFor(el);
+      el.contentEditable = editMode ? "true" : "false"; // covers elements re-rendered after editMode was toggled
+      if (hiddenBlocks.has(block)) { block.style.display = "none"; return; }
+      block.style.display = "";
+      const edit = edits[id];
+      if (edit && typeof edit.html === "string" && document.activeElement !== el && el.innerHTML !== edit.html) {
+        el.innerHTML = edit.html;
+      }
+    });
+  }
+  window.__veApplyEdits = applyEdits;
+  function labelOf(el) { return el.getAttribute("data-edit-label") || el.getAttribute("data-edit"); }
+
+  function positionPill(el) {
+    const r = el.getBoundingClientRect();
+    pill.style.top = Math.max(8, r.top - 46) + "px";
+    let left = Math.min(r.left, window.innerWidth - pill.offsetWidth - 8);
+    pill.style.left = Math.max(8, left) + "px";
+  }
+  function updateBoldState() { try { pillBold.classList.toggle("active", document.queryCommandState("bold")); } catch (e) {} }
+  function showPillFor(el) {
+    focusedId = el.getAttribute("data-edit");
+    pillLabel.textContent = labelOf(el);
+    pill.classList.add("show");
+    positionPill(el);
+    updateBoldState();
+  }
+  function hidePill() { pill.classList.remove("show"); focusedId = null; }
+
+  function setEditMode(on) {
+    editMode = on;
+    document.body.classList.toggle("ve-mode", on);
+    fab.classList.toggle("on", on);
+    fab.textContent = on ? "✓ סיימתי לערוך" : "✎ עריכת טקסט";
+    panel.classList.toggle("open", on);
+    document.querySelectorAll("[data-edit]").forEach((el) => { el.contentEditable = on ? "true" : "false"; });
+    if (!on) hidePill();
+  }
+  fab.addEventListener("click", () => setEditMode(!editMode));
+
+  function recordEdit(el) {
+    const id = el.getAttribute("data-edit");
+    const html = el.innerHTML;
+    if (html === (originals[id] || "")) delete edits[id]; else edits[id] = { html };
+    save();
+  }
+
+  document.addEventListener("focusin", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    showPillFor(el);
+  });
+  document.addEventListener("focusout", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!el) return;
+    recordEdit(el);
+    hidePill();
+  });
+  document.addEventListener("input", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    recordEdit(el);
+    const id = el.getAttribute("data-edit");
+    document.querySelectorAll('[data-edit="' + CSS.escape(id) + '"]').forEach((other) => {
+      if (other !== el) other.innerHTML = el.innerHTML;
+    });
+    if (focusedId === id) positionPill(el);
+  });
+  document.addEventListener("keyup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  document.addEventListener("mouseup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  window.addEventListener("scroll", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); }, true);
+  window.addEventListener("resize", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); });
+
+  pillBold.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    document.execCommand("bold");
+    const el = document.activeElement;
+    if (el && el.hasAttribute("data-edit")) recordEdit(el);
+    updateBoldState();
+  });
+
+  pillDel.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    if (!confirm("למחוק את האזור הזה מהעמוד? אפשר לשחזר עם 'איפוס שדה'.")) return;
+    const el = document.querySelector('[data-edit="' + CSS.escape(focusedId) + '"]');
+    edits[focusedId] = { deleted: true };
+    save();
+    if (el) blockFor(el).style.display = "none";
+    hidePill();
+  });
+
+  pillReset.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    document.querySelectorAll('[data-edit="' + CSS.escape(focusedId) + '"]').forEach((el) => {
+      el.innerHTML = originals[focusedId] || "";
+      blockFor(el).style.display = "";
+    });
+    delete edits[focusedId];
+    save();
+    hidePill();
+  });
+
+  document.getElementById("ve-reset").addEventListener("click", () => {
+    if (!confirm("לאפס את כל השינויים בכל עמודי האתר? הפעולה לא הפיכה.")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  function htmlToReadable(html) {
+    const d = document.createElement("div");
+    d.innerHTML = html;
+    d.querySelectorAll("b, strong").forEach((b) => { b.replaceWith("**" + b.textContent + "**"); });
+    return d.textContent.trim();
+  }
+
+  document.getElementById("ve-copy").addEventListener("click", async () => {
+    const ids = Object.keys(edits);
+    let text;
+    if (!ids.length) {
+      text = "לא בוצעו שינויים עדיין בעורך.";
+    } else {
+      const lines = ids.map((id) => {
+        const el = document.querySelector('[data-edit="' + CSS.escape(id) + '"]');
+        const label = el ? labelOf(el) : id;
+        if (edits[id].deleted) return "- [" + id + "] " + label + ": למחוק את האזור הזה מהאתר.";
+        return "- [" + id + "] " + label + ':\n  לפני: "' + htmlToReadable(originals[id] || "") + '"\n  אחרי: "' + htmlToReadable(edits[id].html) + '"';
+      });
+      text =
+        "עדכני בבקשה את תוכן האתר (site.ts, וגם קבצי preview הרלוונטיים) לפי השינויים הבאים שערכתי בעורך הוויזואלי באתר:\n\n" +
+        lines.join("\n\n") +
+        "\n\nעדכני בכל המקומות הרלוונטיים (site.ts + preview/*.html + הרכיבים ב-React אם צריך) ושמרי על עיצוב זהה. **בולד** מתייחס להדגשת טקסט. אל תעלי ל-Lovable בלי אישור.";
+    }
+    try { await navigator.clipboard.writeText(text); } catch (e) { window.prompt("העתיקי ידנית:", text); }
+    const b = document.getElementById("ve-copy");
+    const old = b.textContent;
+    b.textContent = "✓ הועתק! הדביקי לקלוד בצ'אט";
+    setTimeout(() => { b.textContent = old; }, 2500);
+  });
+
+  captureOriginals();
+  applyEdits();
+  save();
+})();
 </script>
 </body>
 </html>

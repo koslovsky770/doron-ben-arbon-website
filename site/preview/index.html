@@ -79,7 +79,7 @@ tailwind.config = {
       </svg>
       <span class="flex flex-col justify-center leading-none">
         <span class="font-display text-[26px] lg:text-[34px] font-bold leading-none tracking-tight text-ink-2">תיווך דורון</span>
-        <span class="mt-1 text-[11px] lg:text-[13px] font-medium leading-none text-ink-7">מתווך בין נכסים לאנשים</span>
+        <span class="mt-1 text-[11px] lg:text-[13px] font-medium leading-none text-ink-7" data-edit="site.tagline" data-edit-label="הטאגליין (הדר)">מתווך בין נכסים לאנשים</span>
       </span>
     </a>
 
@@ -135,7 +135,7 @@ tailwind.config = {
       <div aria-hidden class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand font-display text-sm font-bold text-white">יב</div>
       <div class="min-w-0">
         <div class="flex items-center gap-[2px]" data-stars="5"></div>
-        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white">100% אמינות, ליווי אישי ומקצועי</blockquote>
+        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white" data-edit="hero.reviews.0.quote" data-edit-label="ציטוט צף 1">100% אמינות, ליווי אישי ומקצועי</blockquote>
         <figcaption class="mt-1.5 text-[11px] font-semibold text-white/70">יוסף בן פז <span class="font-normal">| מנכ״ל יגאל נכסים</span></figcaption>
       </div>
     </figure>
@@ -144,7 +144,7 @@ tailwind.config = {
       <div aria-hidden class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand font-display text-sm font-bold text-white">שפ</div>
       <div class="min-w-0">
         <div class="flex items-center gap-[2px]" data-stars="5"></div>
-        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white">הייתי פונה אליו לכל פרויקט בבני ברק</blockquote>
+        <blockquote class="mt-2 text-[15px] font-medium leading-snug text-white" data-edit="hero.reviews.1.quote" data-edit-label="ציטוט צף 2">הייתי פונה אליו לכל פרויקט בבני ברק</blockquote>
         <figcaption class="mt-1.5 text-[11px] font-semibold text-white/70">שי פסל <span class="font-normal">| גרסטנפלד הנדסה ובניין</span></figcaption>
       </div>
     </figure>
@@ -152,17 +152,17 @@ tailwind.config = {
 
   <div dir="rtl" class="relative z-10 w-full px-4 pb-16 pt-12 sm:px-8 lg:min-h-[934px] lg:min-w-0 lg:flex-1 lg:pl-16 lg:pr-[285px] lg:pb-[164px] lg:pt-[268px] lg:-ml-[30%]">
     <div class="max-w-[815px] animate-fade-up">
-      <h1 class="font-display text-d2 font-extrabold tracking-tight text-ink-2">מחפשים משרד או חנות ב<span class="text-brand">בני ברק</span>?</h1>
-      <p class="mt-4 max-w-[815px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]">העסק שלך צריך את הנכס הנכון והליווי שידאג לעסקה הנכונה.</p>
-      <p class="mt-5 max-w-[815px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">דורון בן ארבון מלווה בעלי עסקים כבר למעלה מ־15 שנה בשוק הנדל״ן המסחרי בבני ברק — מאיתור הנכס הנכון, דרך המשא ומתן ועד לסגירת העסקה בתנאים הטובים ביותר.</p>
+      <h1 class="font-display text-d2 font-extrabold tracking-tight text-ink-2"><span data-edit="hero.titleStart" data-edit-label="כותרת ראשית — התחלה">מחפשים משרד או חנות ב</span><span class="text-brand" data-edit="hero.titleHighlight" data-edit-label="כותרת ראשית — מילה מודגשת">בני ברק</span><span data-edit="hero.titleEnd" data-edit-label="כותרת ראשית — סיום">?</span></h1>
+      <p class="mt-4 max-w-[815px] text-[20px] font-semibold leading-snug text-ink-4 sm:text-[22px]" data-edit="hero.subtitle" data-edit-label="תת-כותרת">העסק שלך צריך את הנכס הנכון והליווי שידאג לעסקה הנכונה.</p>
+      <p class="mt-5 max-w-[815px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="hero.paragraph" data-edit-label="פסקת פתיחה">דורון בן ארבון מלווה בעלי עסקים כבר למעלה מ־15 שנה בשוק הנדל״ן המסחרי בבני ברק — מאיתור הנכס הנכון, דרך המשא ומתן ועד לסגירת העסקה בתנאים הטובים ביותר.</p>
       <div class="mt-9 flex flex-wrap items-center gap-4 sm:gap-8">
         <a href="tel:+972544980159" class="btn-inner-brand relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-brand px-7 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          התקשרו עכשיו
+          <span data-edit="hero.primaryCta.label" data-edit-label="כפתור התקשרות">התקשרו עכשיו</span>
         </a>
         <a href="#" data-wa class="btn-inner-dark relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-medium text-ink-4 transition-colors hover:bg-ink-10">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          וואטסאפ
+          <span data-edit="hero.secondaryCta.label" data-edit-label="כפתור וואטסאפ">וואטסאפ</span>
         </a>
       </div>
     </div>
@@ -180,15 +180,15 @@ tailwind.config = {
 
   <div class="relative z-10 mx-auto max-w-[1440px] px-4 py-20 text-center sm:px-8 lg:px-16 lg:py-[120px]">
     <h2 class="mx-auto max-w-[920px] font-display text-d1 font-extrabold leading-[1.02] tracking-tight text-white">
-      נכס נכון<span aria-hidden class="mx-3 inline-block h-[0.42em] w-[1.3em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span>שקט אמיתי<br />גם אחרי החתימה.
+      <span data-edit="about.titleStart" data-edit-label="כותרת אודות — מילה 1">נכס נכון</span><span aria-hidden class="mx-3 inline-block h-[0.42em] w-[1.3em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span><span data-edit="about.titleEnd" data-edit-label="כותרת אודות — מילה 2">שקט אמיתי</span><br /><span data-edit="about.titleSecondLine" data-edit-label="כותרת אודות — שורה שנייה">גם אחרי החתימה.</span>
     </h2>
-    <p class="mx-auto mt-7 max-w-[789px] text-[17px] leading-[1.6] text-white/85 sm:text-lg">במקום לרוץ בין נכסים, להתלבט אם המחיר נכון ולחשוש ממה שלא ידעתם לבדוק — אתם מקבלים ליווי מקצועי ממי שחי את השוק כבר מעל 15 שנה, מכיר את המחירים, את האזורים ואת העסקאות, ודואג שתוכלו להיכנס לעסקה בראש שקט.</p>
-    <a href="about.html" class="relative mt-9 inline-flex h-[56px] items-center justify-center rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5">עוד עלינו ←</a>
+    <p class="mx-auto mt-7 max-w-[789px] text-[17px] leading-[1.6] text-white/85 sm:text-lg" data-edit="about.paragraph" data-edit-label="פסקת אודות">במקום לרוץ בין נכסים, להתלבט אם המחיר נכון ולחשוש ממה שלא ידעתם לבדוק — אתם מקבלים ליווי מקצועי ממי שחי את השוק כבר מעל 15 שנה, מכיר את המחירים, את האזורים ואת העסקאות, ודואג שתוכלו להיכנס לעסקה בראש שקט.</p>
+    <a href="about.html" class="relative mt-9 inline-flex h-[56px] items-center justify-center rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5" data-edit="about.cta.label" data-edit-label="כפתור עוד עלינו">עוד עלינו ←</a>
 
     <dl class="mx-auto mt-12 flex max-w-[720px] flex-wrap items-center justify-center gap-x-10 gap-y-6 sm:gap-x-14">
-      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white">+15</dt><dd class="mt-1.5 text-sm font-medium text-white/80">שנות ניסיון בנדל״ן מסחרי</dd></div>
-      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white">1:1</dt><dd class="mt-1.5 text-sm font-medium text-white/80">ליווי אישי לאורך כל העסקה</dd></div>
-      <div class="text-center"><dt class="font-display text-[32px] font-extrabold leading-none text-white">+125</dt><dd class="mt-1.5 text-sm font-medium text-white/80">חנויות ומשרדים שהושכרו בבני ברק</dd></div>
+      <div class="text-center" data-edit-block><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.0.value" data-edit-label="מספר סטטיסטיקה 1">+15</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.0.label" data-edit-label="תווית סטטיסטיקה 1">שנות ניסיון בנדל״ן מסחרי</dd></div>
+      <div class="text-center" data-edit-block><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.1.value" data-edit-label="מספר סטטיסטיקה 2">1:1</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.1.label" data-edit-label="תווית סטטיסטיקה 2">ליווי אישי לאורך כל העסקה</dd></div>
+      <div class="text-center" data-edit-block><dt class="font-display text-[32px] font-extrabold leading-none text-white" data-edit="about.stats.2.value" data-edit-label="מספר סטטיסטיקה 3">+125</dt><dd class="mt-1.5 text-sm font-medium text-white/80" data-edit="about.stats.2.label" data-edit-label="תווית סטטיסטיקה 3">חנויות ומשרדים שהושכרו בבני ברק</dd></div>
     </dl>
   </div>
 
@@ -200,10 +200,10 @@ tailwind.config = {
   <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
     <div class="mx-auto max-w-[1000px] text-center">
       <div class="flex items-center justify-center gap-5">
-        <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2">תיווך מסחרי - חשיבה יזמית</h2>
+        <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="servicesSection.title" data-edit-label="כותרת - תיווך מסחרי חשיבה יזמית">תיווך מסחרי - חשיבה יזמית</h2>
         <svg viewBox="0 0 100 100" fill="none" class="h-[38px] w-[38px] shrink-0 text-brand" aria-hidden><path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <p class="mx-auto mt-6 max-w-[674px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">אנחנו מלווים בעלי עסקים ויזמים בדרך לנכס הנכון, מתוך אחריות אמיתית לתוצאה. בוחנים התאמה, שומרים על האינטרסים שלכם ומנהלים את התהליך מתוך הבנה מסחרית עמוקה וניסיון של שנים.</p>
+      <p class="mx-auto mt-6 max-w-[674px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="servicesSection.paragraph" data-edit-label="פסקת השירות שתקבלו">אנחנו מלווים בעלי עסקים ויזמים בדרך לנכס הנכון, מתוך אחריות אמיתית לתוצאה. בוחנים התאמה, שומרים על האינטרסים שלכם ומנהלים את התהליך מתוך הבנה מסחרית עמוקה וניסיון של שנים.</p>
     </div>
     <div id="services-grid" class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-[72px] lg:grid-cols-3"></div>
   </div>
@@ -216,11 +216,11 @@ tailwind.config = {
       <div class="max-w-[796px]">
         <div class="flex items-center gap-6">
           <svg viewBox="0 0 100 100" fill="none" class="h-[38px] w-[38px] shrink-0 text-brand" aria-hidden><path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2">פרויקטים נבחרים</h2>
+          <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="projectsSection.title" data-edit-label="כותרת - פרויקטים נבחרים">פרויקטים נבחרים</h2>
         </div>
-        <p class="mt-6 text-[17px] leading-[1.6] text-ink-6 sm:text-lg">חלק מהעסקאות שליווינו: חנויות, מחסנים, משרדים ובניינים שלמים. לכל נכס יש את הסיפור שלו, ולכל לקוח את ההתאמה הנכונה עבורו.</p>
+        <p class="mt-6 text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="projectsSection.paragraph" data-edit-label="פסקת פרויקטים נבחרים">חלק מהעסקאות שליווינו: חנויות, מחסנים, משרדים ובניינים שלמים. לכל נכס יש את הסיפור שלו, ולכל לקוח את ההתאמה הנכונה עבורו.</p>
       </div>
-      <a href="#" class="btn-inner-dark relative flex h-[56px] shrink-0 items-center justify-center self-start rounded-lg bg-ink-12 px-6 text-base font-medium text-ink-4 transition-colors hover:bg-ink-11 lg:self-end">לכל הפרויקטים</a>
+      <a href="#" class="btn-inner-dark relative flex h-[56px] shrink-0 items-center justify-center self-start rounded-lg bg-ink-12 px-6 text-base font-medium text-ink-4 transition-colors hover:bg-ink-11 lg:self-end" data-edit="projectsSection.cta.label" data-edit-label="כפתור לכל הפרויקטים">לכל הפרויקטים</a>
     </div>
 
     <div class="mt-10 overflow-x-auto pb-1 lg:mt-12">
@@ -229,7 +229,7 @@ tailwind.config = {
 
     <div id="track" class="no-bar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 lg:mt-[72px]"></div>
     <div id="empty" class="mt-10 hidden flex-col items-start gap-6 rounded-2xl border border-ink-10 bg-ink-12 p-8 sm:flex-row sm:items-center sm:justify-between lg:mt-[72px] lg:p-12">
-      <p class="max-w-[640px] text-[17px] leading-[1.6] text-ink-6">עדיין לא העלינו לכאן עסקאות מקטגוריה זו. יש לנו מה לספר — דברו איתי ואשמח לעדכן במה שרלוונטי עבורכם.</p>
+      <p class="max-w-[640px] text-[17px] leading-[1.6] text-ink-6" data-edit="projectsSection.emptyState" data-edit-label="הודעת אין עדיין תוכן (מגרשים)">עדיין לא העלינו לכאן עסקאות מקטגוריה זו. יש לנו מה לספר — דברו איתי ואשמח לעדכן במה שרלוונטי עבורכם.</p>
       <a href="#" data-wa class="btn-inner-brand relative flex h-[56px] shrink-0 items-center justify-center rounded-lg bg-brand px-6 text-base font-bold text-white">דברו איתי</a>
     </div>
 
@@ -252,16 +252,16 @@ tailwind.config = {
   <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
     <div class="mx-auto max-w-[1000px] text-center">
       <div class="flex items-center justify-center gap-5">
-        <h2 class="font-display text-d2 font-bold tracking-tight text-ink-2">ממליצים עלינו בגוגל</h2>
+        <h2 class="font-display text-d2 font-bold tracking-tight text-ink-2" data-edit="googleReviewsSection.title" data-edit-label="כותרת - ביקורות גוגל">ממליצים עלינו בגוגל</h2>
         <svg viewBox="0 0 48 48" class="h-9 w-9 shrink-0" aria-hidden><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
       </div>
 
       <div class="mt-8 inline-flex items-center gap-4 rounded-xl border border-ink-10 bg-ink-12 px-6 py-4">
-        <span class="ltr font-display text-[32px] font-bold leading-none text-ink-2">5.0</span>
+        <span class="ltr font-display text-[32px] font-bold leading-none text-ink-2" data-edit="googleBusiness.rating" data-edit-label="דירוג גוגל">5.0</span>
         <span class="h-8 w-px bg-ink-10" aria-hidden></span>
         <span class="flex flex-col items-start gap-1.5">
           <span class="flex items-center gap-[3px]" data-stars5="4"></span>
-          <span class="text-sm text-ink-7">23 ביקורות בגוגל</span>
+          <span class="text-sm text-ink-7" data-edit="googleBusiness.reviewCountLabel" data-edit-label="תווית מספר ביקורות">23 ביקורות בגוגל</span>
         </span>
       </div>
     </div>
@@ -272,7 +272,7 @@ tailwind.config = {
       </div>
 
       <div class="mt-8 flex items-center justify-between gap-6">
-        <a href="https://www.google.com/maps?cid=1215550842583894295" target="_blank" rel="noopener noreferrer" class="text-base text-ink-4 underline underline-offset-4 transition-colors hover:text-brand">לכל הביקורות בגוגל</a>
+        <a href="https://www.google.com/maps?cid=1215550842583894295" target="_blank" rel="noopener noreferrer" class="text-base text-ink-4 underline underline-offset-4 transition-colors hover:text-brand" data-edit="googleReviewsSection.allReviewsLabel" data-edit-label="קישור לכל הביקורות">לכל הביקורות בגוגל</a>
         <div class="flex items-center gap-5">
           <div id="revDots" class="flex items-center gap-2" role="tablist" aria-label="בחירת ביקורת"></div>
           <div class="flex gap-2.5">
@@ -303,11 +303,11 @@ tailwind.config = {
     <svg data-spiro="26" viewBox="0 0 400 400" fill="none" class="pointer-events-none absolute -right-[18%] top-1/2 h-[520px] w-[520px] -translate-y-1/2 text-white/25"></svg>
     <div class="relative">
       <h2 class="mx-auto max-w-[900px] font-display text-d1 font-extrabold leading-[1.05] tracking-tight text-white">
-        בואו נמצא<span aria-hidden class="mx-3 inline-block h-[0.4em] w-[1.15em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span>את הנכס<br />הבא שלכם
+        <span data-edit="ctaSection.title" data-edit-label="כותרת CTA תחתון">בואו נמצא<span aria-hidden class="mx-3 inline-block h-[0.4em] w-[1.15em] translate-y-[-0.1em] rounded-full bg-ink-13 align-middle"></span>את הנכס<br />הבא שלכם</span>
       </h2>
       <a href="#" data-wa class="mt-10 inline-flex h-[56px] items-center justify-center gap-2.5 rounded-lg bg-ink-13 px-8 text-base font-medium text-ink-4 transition-transform duration-200 hover:-translate-y-0.5">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-        דברו איתי בוואטסאפ
+        <span data-edit="ctaSection.cta.label" data-edit-label="כפתור CTA תחתון">דברו איתי בוואטסאפ</span>
       </a>
     </div>
   </div>
@@ -332,7 +332,7 @@ tailwind.config = {
           <span class="mt-[3px] text-[10px] font-medium leading-none text-ink-7">מתווך בין נכסים לאנשים</span>
         </span>
       </a>
-      <p class="mt-5 max-w-[260px] text-sm leading-[1.6] text-ink-7">תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. ליווי אישי עד קבלת המפתח.</p>
+      <p class="mt-5 max-w-[260px] text-sm leading-[1.6] text-ink-7" data-edit="footer.blurb" data-edit-label="תיאור קצר בפוטר">תיווך מסחרי, שיווק פרויקטים ומגרשים בבני ברק. ליווי אישי עד קבלת המפתח.</p>
       <div class="mt-6 flex flex-col gap-3">
         <a href="tel:+972544980159" class="btn-inner-brand relative flex h-[52px] items-center justify-center gap-2.5 rounded-lg bg-brand px-6 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -428,23 +428,23 @@ addEventListener("scroll", () => {
 
 /* ---- data ---- */
 const PROJECTS = [
-  { c:"commercial", t:"האחים חדד – כלי כסף", d:"השכרת שטח מסחרי גדול לרשת כלי כסף מובילה, כולל התאמת השטח לצורכי התצוגה והמכירה.", l:"רח׳ הקישון, בני ברק", g:["550 מ״ר","שטח מסחרי"], i:"proj-hadad.jpg" },
-  { c:"commercial", t:"יבואן גלורי", d:"מחסנים ומשרדים ליבואן פעיל — שילוב של שטח אחסון נוח וקומת משרדים צמודה.", l:"רח׳ הקישון, בני ברק", g:["300 מ״ר","מחסנים ומשרדים"], i:"proj-glory.jpg" },
-  { c:"commercial", t:"משכן התכלת", d:"השכרת ארבע חנויות ברחבי בני ברק לרשת אחת, בהתאמה מדויקת של מיקום וקהל לכל סניף.", l:"ברחבי בני ברק", g:["4 חנויות","רשת קמעונאית"], i:"proj-mishkan.jpg" },
-  { c:"project-marketing", t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", l:"רבי עקיבא 101, בני ברק", g:["מגורים ומסחר","אוכלס במלואו"], i:"proj-akiva101.jpg" },
-  { c:"project-marketing", t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", l:"רבי עקיבא 34, בני ברק", g:["2,000 מ״ר","מסחר ומשרדים"], i:"proj-akiva34.jpg" },
-  { c:"project-marketing", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", l:"חזון איש 12, בני ברק", g:["900 מ״ר","מבנה ציבור"], i:"proj-hazon12.jpg" }
+  { id:"hadad", c:"commercial", t:"האחים חדד – כלי כסף", d:"השכרת שטח מסחרי גדול לרשת כלי כסף מובילה, כולל התאמת השטח לצורכי התצוגה והמכירה.", l:"רח׳ הקישון, בני ברק", g:["550 מ״ר","שטח מסחרי"], i:"proj-hadad.jpg" },
+  { id:"glory", c:"commercial", t:"יבואן גלורי", d:"מחסנים ומשרדים ליבואן פעיל — שילוב של שטח אחסון נוח וקומת משרדים צמודה.", l:"רח׳ הקישון, בני ברק", g:["300 מ״ר","מחסנים ומשרדים"], i:"proj-glory.jpg" },
+  { id:"mishkan", c:"commercial", t:"משכן התכלת", d:"השכרת ארבע חנויות ברחבי בני ברק לרשת אחת, בהתאמה מדויקת של מיקום וקהל לכל סניף.", l:"ברחבי בני ברק", g:["4 חנויות","רשת קמעונאית"], i:"proj-mishkan.jpg" },
+  { id:"akiva-101", c:"project-marketing", t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", l:"רבי עקיבא 101, בני ברק", g:["מגורים ומסחר","אוכלס במלואו"], i:"proj-akiva101.jpg" },
+  { id:"akiva-34", c:"project-marketing", t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", l:"רבי עקיבא 34, בני ברק", g:["2,000 מ״ר","מסחר ומשרדים"], i:"proj-akiva34.jpg" },
+  { id:"hazon-ish-12", c:"project-marketing", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", l:"חזון איש 12, בני ברק", g:["900 מ״ר","מבנה ציבור"], i:"proj-hazon12.jpg" }
 ];
 const FILTERS = [["all","הכל"],["commercial","תיווך מסחרי"],["project-marketing","שיווק פרויקטים"],["plots","מגרשים"]];
 const SERVICES = [
-  { t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק - איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg", href:"commercial.html" },
-  { t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg", href:"project-marketing.html" },
-  { t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg", href:"plots.html" }
+  { id:"commercial", t:"תיווך מסחרי", d:"חנויות, משרדים, מחסנים ושטחי מסחר בבני ברק - איתור, תמחור והשכרה או מכירה מדויקת ומהירה.", i:"svc-commercial.jpg", href:"commercial.html" },
+  { id:"project-marketing", t:"שיווק פרויקטים", d:"ליווי ושיווק פרויקטים חדשים בניינים ומתחמים עבור יזמים, מוסדות ורשויות, עד לאכלוס מלא.", i:"svc-projects.jpg", href:"project-marketing.html" },
+  { id:"plots", t:"מגרשים", d:"איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות.", i:"svc-plots.jpg", href:"plots.html" }
 ];
 const TESTIS = [
-  { q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
-  { q:"״דורון תרם רבות להצלחתו של הפרויקט. היחס המיוחד שלו והליווי גם לאחר חתימת החוזה יוצאים מגדר הרגיל — ללא צל של ספק הייתי פונה אליו לכל פרויקט בבני ברק.״", a:"שי פסל", r:"גרסטנפלד הנדסה ובניין בע״מ", n:"שפ" },
-  { q:"״אחד המשרדים החזקים והמומלצים בבני ברק. 100% אמינות, ליווי אישי ומקצועי, התמצאות במחירי השוק וליווי עד לחתימת החוזה. אנחנו מרוצים מאוד מהעבודה איתו.״", a:"יוסף בן פז", r:"מנכ״ל, יגאל נכסים", n:"יב" }
+  { id:"greenblatt", q:"״לאורך כל התהליך תמיד היית זמין לענות לשיחות ולמיילים באופן מיידי, ועדכנת אותי בכל שלב. הידע שלך על שוק הנדל״ן המקומי וכישורי המשא ומתן שלך היו יקרי ערך — עלית על הציפיות שלי מכל הבחינות.״", a:"אברהם גרינבלט", r:"מנהל, ח.מ.ג מהנדסים", n:"אג" },
+  { id:"pesel", q:"״דורון תרם רבות להצלחתו של הפרויקט. היחס המיוחד שלו והליווי גם לאחר חתימת החוזה יוצאים מגדר הרגיל — ללא צל של ספק הייתי פונה אליו לכל פרויקט בבני ברק.״", a:"שי פסל", r:"גרסטנפלד הנדסה ובניין בע״מ", n:"שפ" },
+  { id:"benpaz", q:"״אחד המשרדים החזקים והמומלצים בבני ברק. 100% אמינות, ליווי אישי ומקצועי, התמצאות במחירי השוק וליווי עד לחתימת החוזה. אנחנו מרוצים מאוד מהעבודה איתו.״", a:"יוסף בן פז", r:"מנכ״ל, יגאל נכסים", n:"יב" }
 ];
 const IMG = "../lovable/public/images/";
 
@@ -455,25 +455,25 @@ document.getElementById("services-grid").innerHTML = SERVICES.map(s => `
       <img src="${IMG}${s.i}" alt="${s.t}" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
     </div>
     <div class="flex flex-1 flex-col gap-3">
-      <h3 class="font-display text-d3 font-bold text-ink-4">${s.t}</h3>
-      <p class="text-base leading-[1.5] text-ink-6">${s.d}</p>
+      <h3 class="font-display text-d3 font-bold text-ink-4" data-edit="services.${s.id}.title" data-edit-label="כותרת שירות">${s.t}</h3>
+      <p class="text-base leading-[1.5] text-ink-6" data-edit="services.${s.id}.description" data-edit-label="תיאור שירות">${s.d}</p>
     </div>
-    <a href="${s.href}" class="inline-flex items-center gap-2 self-start text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand">קראו עוד…
+    <a href="${s.href}" class="inline-flex items-center gap-2 self-start text-base font-medium text-ink-4 underline underline-offset-4 transition-colors hover:text-brand"><span data-edit="servicesSection.linkLabel" data-edit-label="קישור קראו עוד בכרטיסי שירות">קראו עוד…</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 transition-transform duration-200 group-hover:-translate-x-1"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
     </a>
   </article>`).join("");
 
 /* google reviews */
 const GREVIEWS = [
-  { n:"G", a:"Glory office", w:"לפני חודש", t:"איש מדהים ויקר שמלווה אותך עד לחתימה ודואג ללקוח הכי הרבה. נאמן, אמין, דיסקרטי וישר. התיווך הכי טוב מכל הסיבות שבעולם — דורון מתווך מושלם." },
-  { n:"M", a:"Meitavel Simhi", w:"לפני 6 חודשים", t:"המתווך הכי טוב ומקצועי שתמצאו. דורון איש מדהים, מגדיל ראש, אפשר לסמוך עליו גם בדברים קטנים — במיוחד אם אתה לא נמצא בעיר." },
-  { n:"Y", a:"yoel rosner", w:"לפני שנה", t:"תיווך דורון הציע לי נכס ולא ראיתי כזה מתווך בחיים. עם כזאת הוגנות ויושר ורצון שיהיה ללקוח הכי טוב שאפשר, ולא דוחף אותך לעסקה עד שבדקת שהכל טוב לך, ומלווה אותך לאורך כל הדרך. בפעם הבאה אני פונה רק לדורון." }
+  { id:"glory-office", n:"G", a:"Glory office", w:"לפני חודש", t:"איש מדהים ויקר שמלווה אותך עד לחתימה ודואג ללקוח הכי הרבה. נאמן, אמין, דיסקרטי וישר. התיווך הכי טוב מכל הסיבות שבעולם — דורון מתווך מושלם." },
+  { id:"meitavel-simhi", n:"M", a:"Meitavel Simhi", w:"לפני 6 חודשים", t:"המתווך הכי טוב ומקצועי שתמצאו. דורון איש מדהים, מגדיל ראש, אפשר לסמוך עליו גם בדברים קטנים — במיוחד אם אתה לא נמצא בעיר." },
+  { id:"yoel-rosner", n:"Y", a:"yoel rosner", w:"לפני שנה", t:"תיווך דורון הציע לי נכס ולא ראיתי כזה מתווך בחיים. עם כזאת הוגנות ויושר ורצון שיהיה ללקוח הכי טוב שאפשר, ולא דוחף אותך לעסקה עד שבדקת שהכל טוב לך, ומלווה אותך לאורך כל הדרך. בפעם הבאה אני פונה רק לדורון." }
 ];
 const G_SMALL = '<svg viewBox="0 0 48 48" class="h-6 w-6 shrink-0" aria-hidden><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
 const revTrack = document.getElementById("revTrack");
 const revDots = document.getElementById("revDots");
 revTrack.innerHTML = GREVIEWS.map(r => `
-  <figure class="w-full shrink-0 px-1">
+  <figure class="w-full shrink-0 px-1" data-edit-block>
     <div class="mx-auto flex max-w-[900px] flex-col gap-7 rounded-2xl border border-ink-10 bg-ink-12 p-7 sm:p-10">
       <div class="flex items-center gap-4">
         <div aria-hidden class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand font-display text-xl font-bold text-white">${r.n}</div>
@@ -484,7 +484,7 @@ revTrack.innerHTML = GREVIEWS.map(r => `
         ${G_SMALL}
       </div>
       <div class="flex items-center gap-[3px]" aria-label="5 מתוך 5">${STAR_LG.repeat(5)}</div>
-      <blockquote class="font-display text-[19px] font-medium leading-[1.45] text-ink-4 sm:text-[22px] sm:leading-[1.4]">${r.t}</blockquote>
+      <blockquote class="font-display text-[19px] font-medium leading-[1.45] text-ink-4 sm:text-[22px] sm:leading-[1.4]" data-edit="googleReviews.${r.id}.text" data-edit-label="טקסט ביקורת גוגל">${r.t}</blockquote>
     </div>
   </figure>`).join("");
 
@@ -509,7 +509,7 @@ setInterval(() => { if (!revPaused) revGo(revIndex + 1); }, 7000);
 
 /* business testimonials (compact) */
 document.getElementById("testi-grid").innerHTML = TESTIS.map(t => `
-  <figure class="flex flex-col gap-5 rounded-2xl border border-ink-10 bg-ink-13 p-6">
+  <figure class="flex flex-col gap-5 rounded-2xl border border-ink-10 bg-ink-13 p-6" data-edit-block>
     <div class="flex items-center gap-3">
       <div aria-hidden class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand font-display text-base font-bold text-white">${t.n}</div>
       <figcaption class="min-w-0">
@@ -517,7 +517,7 @@ document.getElementById("testi-grid").innerHTML = TESTIS.map(t => `
         <span class="block truncate text-[13px] text-ink-7">${t.r}</span>
       </figcaption>
     </div>
-    <blockquote class="text-[15px] leading-[1.6] text-ink-6">${t.q}</blockquote>
+    <blockquote class="text-[15px] leading-[1.6] text-ink-6" data-edit="testimonialsSection.items.${t.id}.quote" data-edit-label="ציטוט המלצה">${t.q}</blockquote>
   </figure>`).join("");
 
 /* projects + tabs + carousel */
@@ -529,14 +529,14 @@ document.getElementById("tabs").innerHTML = FILTERS.map(([id, label]) => `
     class="flex h-[53px] items-center justify-center whitespace-nowrap rounded-lg border px-5 text-[15px] font-medium transition-colors sm:text-base ${id === "all" ? "border-ink-10 bg-ink-13 text-ink-4" : "border-transparent text-ink-7 hover:text-ink-4"}">${label}</button>`).join("");
 
 function card(p) {
-  return `<article class="flex w-[85vw] shrink-0 snap-start flex-col gap-8 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:w-[360px] lg:w-[calc((100%-2rem)/3)]">
+  return `<article class="flex w-[85vw] shrink-0 snap-start flex-col gap-8 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:w-[360px] lg:w-[calc((100%-2rem)/3)]" data-edit-block>
     <div class="h-[220px] w-full overflow-hidden rounded-2xl sm:h-[300px]">
       <img src="${IMG}${p.i}" alt="${p.t}" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy" />
     </div>
     <div class="flex flex-1 flex-col gap-6">
       <div class="flex flex-col gap-2">
-        <h3 class="font-display text-d3 font-bold text-ink-4">${p.t}</h3>
-        <p class="line-clamp-2-safe text-base leading-[1.5] text-ink-6">${p.d}</p>
+        <h3 class="font-display text-d3 font-bold text-ink-4" data-edit="projects.${p.id}.title" data-edit-label="כותרת פרויקט">${p.t}</h3>
+        <p class="line-clamp-2-safe text-base leading-[1.5] text-ink-6" data-edit="projects.${p.id}.description" data-edit-label="תיאור פרויקט">${p.d}</p>
       </div>
       <div class="flex flex-col gap-4">
         <div class="flex items-center gap-1.5">
@@ -545,7 +545,7 @@ function card(p) {
         </div>
         <ul class="flex flex-wrap gap-2">${p.g.map(g => `<li class="flex items-center justify-center rounded-lg border border-ink-10 bg-ink-12 px-4 py-2 text-xs text-ink-6">${g}</li>`).join("")}</ul>
       </div>
-      <a href="${WA}" target="_blank" rel="noopener noreferrer" class="mt-auto flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-light">דברו איתי על נכס דומה</a>
+      <a href="${WA}" target="_blank" rel="noopener noreferrer" class="mt-auto flex items-center justify-center rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-light"><span data-edit="projectsSection.cardCta" data-edit-label="כפתור בכרטיס פרויקט">דברו איתי על נכס דומה</span></a>
     </div>
   </article>`;
 }
@@ -569,6 +569,7 @@ function measure() {
   const now = Math.min(all, Math.round(Math.abs(track.scrollLeft) / step) + 1);
   document.getElementById("pgAll").textContent = String(all).padStart(2, "0");
   document.getElementById("pgNow").textContent = String(now).padStart(2, "0");
+  if (window.__veApplyEdits) window.__veApplyEdits();
 }
 track.addEventListener("scroll", measure, { passive: true });
 addEventListener("resize", measure);
@@ -586,6 +587,240 @@ document.getElementById("tabs").addEventListener("click", e => {
   render();
 });
 render();
+</script>
+
+<!-- ===== VISUAL TEXT EDITOR (site-wide) ===== -->
+<style>
+  .ve-mode [data-edit]{outline:1px dashed rgba(10,184,157,.55);outline-offset:3px;border-radius:4px;cursor:text;transition:background-color .15s}
+  .ve-mode [data-edit]:hover{background-color:rgba(10,184,157,.10)}
+  .ve-mode [data-edit]:focus{outline:2px solid #0AB89D;background-color:rgba(10,184,157,.14)}
+  #ve-fab{position:fixed;bottom:20px;left:20px;z-index:99999;background:#0AB89D;color:#fff;border:0;
+    border-radius:999px;padding:14px 22px;font:700 14px Assistant,system-ui,sans-serif;cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);direction:rtl}
+  #ve-fab.on{background:#161514;border:1px solid #282726}
+  #ve-panel{position:fixed;bottom:78px;left:20px;z-index:99998;width:290px;max-width:calc(100vw - 40px);
+    background:#161514;color:#F0F0F0;border:1px solid #282726;border-radius:14px;
+    box-shadow:0 12px 34px rgba(0,0,0,.45);padding:16px;font:13px Assistant,system-ui,sans-serif;
+    display:none;direction:rtl;text-align:right}
+  #ve-panel.open{display:block}
+  #ve-panel h4{margin:0 0 8px;font-size:15px;font-weight:700;color:#fff}
+  #ve-panel p{margin:0;color:#8D8D8C;line-height:1.5}
+  #ve-count-wrap{margin-top:10px}
+  #ve-count{color:#0AB89D;font-weight:700}
+  #ve-panel button{width:100%;border:0;border-radius:8px;padding:11px;font:700 13px Assistant,system-ui,sans-serif;cursor:pointer;margin-top:8px}
+  #ve-copy{background:#0AB89D;color:#fff}
+  #ve-reset{background:#282726;color:#F0F0F0}
+  #ve-pill{position:fixed;z-index:100000;background:#161514;color:#fff;border:1px solid #0AB89D;border-radius:8px;
+    padding:6px;font:600 12px Assistant,system-ui,sans-serif;display:none;align-items:center;gap:4px;
+    box-shadow:0 8px 20px rgba(0,0,0,.45);direction:rtl}
+  #ve-pill.show{display:flex}
+  #ve-pill-label{padding:0 6px;color:#C0C0BF;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis}
+  #ve-pill button{background:transparent;border:1px solid #282726;border-radius:6px;color:#F0F0F0;cursor:pointer;font:700 12px Assistant,system-ui,sans-serif;padding:5px 8px;white-space:nowrap}
+  #ve-pill button:hover{background:#282726}
+  #ve-pill-bold.active{background:#0AB89D;border-color:#0AB89D;color:#fff}
+  #ve-pill-del{color:#ff8a8a;border-color:#5c2626}
+</style>
+
+<button id="ve-fab" type="button">✎ עריכת טקסט</button>
+<aside id="ve-panel">
+  <h4>עריכת תוכן העמוד</h4>
+  <p>לחצי על כל טקסט עם מסגרת מקווקוות ותקלידי ישירות. אפשר להדגיש (B), למחוק אזור שלם (🗑) או לאפס שדה (↺). השינויים נשמרים בדפדפן הזה ומשותפים לכל עמודי האתר.</p>
+  <div id="ve-count-wrap"><span id="ve-count">0</span> שינויים ממתינים</div>
+  <button id="ve-copy" type="button">📋 העתיקי שינויים לקלוד</button>
+  <button id="ve-reset" type="button">↺ אפסי הכל</button>
+</aside>
+<div id="ve-pill">
+  <span id="ve-pill-label"></span>
+  <button id="ve-pill-bold" type="button" title="הדגשה (בולד)"><b>B</b></button>
+  <button id="ve-pill-del" type="button" title="מחיקת האזור">🗑</button>
+  <button id="ve-pill-reset" type="button" title="איפוס שדה">↺</button>
+</div>
+
+<script>
+(function () {
+  const STORAGE_KEY = "doron-site-edits-v1";
+  const fab = document.getElementById("ve-fab");
+  const panel = document.getElementById("ve-panel");
+  const countEl = document.getElementById("ve-count");
+  const pill = document.getElementById("ve-pill");
+  const pillLabel = document.getElementById("ve-pill-label");
+  const pillBold = document.getElementById("ve-pill-bold");
+  const pillDel = document.getElementById("ve-pill-del");
+  const pillReset = document.getElementById("ve-pill-reset");
+
+  let editMode = false;
+  let focusedId = null;
+  const originals = {}; // id -> original innerHTML
+  let edits = {};
+  try { edits = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { edits = {}; }
+
+  function blockFor(el) { return el.closest("[data-edit-block]") || el; }
+  function captureOriginals() {
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (!(id in originals)) originals[id] = el.innerHTML;
+    });
+  }
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+    countEl.textContent = Object.keys(edits).length;
+  }
+  function applyEdits() {
+    // two passes: a block with ANY deleted field must stay hidden even
+    // though its other fields (title vs. description, say) are processed
+    // separately and would otherwise reset display back to visible.
+    const hiddenBlocks = new Set();
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (edits[id] && edits[id].deleted) hiddenBlocks.add(blockFor(el));
+    });
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      const block = blockFor(el);
+      el.contentEditable = editMode ? "true" : "false"; // covers elements re-rendered after editMode was toggled
+      if (hiddenBlocks.has(block)) { block.style.display = "none"; return; }
+      block.style.display = "";
+      const edit = edits[id];
+      if (edit && typeof edit.html === "string" && document.activeElement !== el && el.innerHTML !== edit.html) {
+        el.innerHTML = edit.html;
+      }
+    });
+  }
+  window.__veApplyEdits = applyEdits;
+  function labelOf(el) { return el.getAttribute("data-edit-label") || el.getAttribute("data-edit"); }
+
+  function positionPill(el) {
+    const r = el.getBoundingClientRect();
+    pill.style.top = Math.max(8, r.top - 46) + "px";
+    let left = Math.min(r.left, window.innerWidth - pill.offsetWidth - 8);
+    pill.style.left = Math.max(8, left) + "px";
+  }
+  function updateBoldState() { try { pillBold.classList.toggle("active", document.queryCommandState("bold")); } catch (e) {} }
+  function showPillFor(el) {
+    focusedId = el.getAttribute("data-edit");
+    pillLabel.textContent = labelOf(el);
+    pill.classList.add("show");
+    positionPill(el);
+    updateBoldState();
+  }
+  function hidePill() { pill.classList.remove("show"); focusedId = null; }
+
+  function setEditMode(on) {
+    editMode = on;
+    document.body.classList.toggle("ve-mode", on);
+    fab.classList.toggle("on", on);
+    fab.textContent = on ? "✓ סיימתי לערוך" : "✎ עריכת טקסט";
+    panel.classList.toggle("open", on);
+    document.querySelectorAll("[data-edit]").forEach((el) => { el.contentEditable = on ? "true" : "false"; });
+    if (!on) hidePill();
+  }
+  fab.addEventListener("click", () => setEditMode(!editMode));
+
+  function recordEdit(el) {
+    const id = el.getAttribute("data-edit");
+    const html = el.innerHTML;
+    if (html === (originals[id] || "")) delete edits[id]; else edits[id] = { html };
+    save();
+  }
+
+  document.addEventListener("focusin", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    showPillFor(el);
+  });
+  document.addEventListener("focusout", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!el) return;
+    recordEdit(el);
+    hidePill();
+  });
+  document.addEventListener("input", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    recordEdit(el);
+    const id = el.getAttribute("data-edit");
+    document.querySelectorAll('[data-edit="' + CSS.escape(id) + '"]').forEach((other) => {
+      if (other !== el) other.innerHTML = el.innerHTML;
+    });
+    if (focusedId === id) positionPill(el);
+  });
+  document.addEventListener("keyup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  document.addEventListener("mouseup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  window.addEventListener("scroll", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); }, true);
+  window.addEventListener("resize", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); });
+
+  pillBold.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    document.execCommand("bold");
+    const el = document.activeElement;
+    if (el && el.hasAttribute("data-edit")) recordEdit(el);
+    updateBoldState();
+  });
+
+  pillDel.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    if (!confirm("למחוק את האזור הזה מהעמוד? אפשר לשחזר עם 'איפוס שדה'.")) return;
+    const el = document.querySelector('[data-edit="' + CSS.escape(focusedId) + '"]');
+    edits[focusedId] = { deleted: true };
+    save();
+    if (el) blockFor(el).style.display = "none";
+    hidePill();
+  });
+
+  pillReset.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    document.querySelectorAll('[data-edit="' + CSS.escape(focusedId) + '"]').forEach((el) => {
+      el.innerHTML = originals[focusedId] || "";
+      blockFor(el).style.display = "";
+    });
+    delete edits[focusedId];
+    save();
+    hidePill();
+  });
+
+  document.getElementById("ve-reset").addEventListener("click", () => {
+    if (!confirm("לאפס את כל השינויים בכל עמודי האתר? הפעולה לא הפיכה.")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  function htmlToReadable(html) {
+    const d = document.createElement("div");
+    d.innerHTML = html;
+    d.querySelectorAll("b, strong").forEach((b) => { b.replaceWith("**" + b.textContent + "**"); });
+    return d.textContent.trim();
+  }
+
+  document.getElementById("ve-copy").addEventListener("click", async () => {
+    const ids = Object.keys(edits);
+    let text;
+    if (!ids.length) {
+      text = "לא בוצעו שינויים עדיין בעורך.";
+    } else {
+      const lines = ids.map((id) => {
+        const el = document.querySelector('[data-edit="' + CSS.escape(id) + '"]');
+        const label = el ? labelOf(el) : id;
+        if (edits[id].deleted) return "- [" + id + "] " + label + ": למחוק את האזור הזה מהאתר.";
+        return "- [" + id + "] " + label + ':\n  לפני: "' + htmlToReadable(originals[id] || "") + '"\n  אחרי: "' + htmlToReadable(edits[id].html) + '"';
+      });
+      text =
+        "עדכני בבקשה את תוכן האתר (site.ts, וגם קבצי preview הרלוונטיים) לפי השינויים הבאים שערכתי בעורך הוויזואלי באתר:\n\n" +
+        lines.join("\n\n") +
+        "\n\nעדכני בכל המקומות הרלוונטיים (site.ts + preview/*.html + הרכיבים ב-React אם צריך) ושמרי על עיצוב זהה. **בולד** מתייחס להדגשת טקסט. אל תעלי ל-Lovable בלי אישור.";
+    }
+    try { await navigator.clipboard.writeText(text); } catch (e) { window.prompt("העתיקי ידנית:", text); }
+    const b = document.getElementById("ve-copy");
+    const old = b.textContent;
+    b.textContent = "✓ הועתק! הדביקי לקלוד בצ'אט";
+    setTimeout(() => { b.textContent = old; }, 2500);
+  });
+
+  captureOriginals();
+  applyEdits();
+  save();
+})();
 </script>
 </body>
 </html>

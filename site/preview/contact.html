@@ -129,10 +129,10 @@ tailwind.config = {
 <section class="relative overflow-x-clip bg-ink-13 pb-4 pt-14 lg:pb-6 lg:pt-24">
   <div class="mx-auto max-w-[1000px] px-4 text-center sm:px-8">
     <div class="flex items-center justify-center gap-4">
-      <h1 class="font-display text-d1 font-extrabold tracking-tight text-ink-2">יצירת קשר</h1>
+      <h1 class="font-display text-d1 font-extrabold tracking-tight text-ink-2" data-edit="contactPage.title" data-edit-label="כותרת ראשית">יצירת קשר</h1>
       <svg viewBox="0 0 100 100" fill="none" class="h-9 w-9 shrink-0 text-brand sm:h-10 sm:w-10" aria-hidden><path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
-    <p class="mx-auto mt-6 max-w-[700px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg">טלפון, וואטסאפ, מייל או הטופס למטה — מה שנוח לכם. נחזור אליכם בהקדם.</p>
+    <p class="mx-auto mt-6 max-w-[700px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="contactPage.paragraph" data-edit-label="פסקה">טלפון, וואטסאפ, מייל או הטופס למטה — מה שנוח לכם. נחזור אליכם בהקדם.</p>
   </div>
 </section>
 
@@ -140,7 +140,7 @@ tailwind.config = {
 <section class="relative z-10 pb-20 lg:pb-[88px]">
   <div class="mx-auto max-w-[900px] px-4 sm:px-8 lg:px-16">
     <form id="contactForm" class="flex w-full flex-col gap-6 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:gap-8 sm:p-8">
-      <h2 class="font-display text-d3 font-bold text-ink-2">השאירו פרטים ונחזור אליכם</h2>
+      <h2 class="font-display text-d3 font-bold text-ink-2" data-edit="contactPage.form.title" data-edit-label="כותרת הטופס">השאירו פרטים ונחזור אליכם</h2>
 
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <label class="field-row">
@@ -296,6 +296,240 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
 
   window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener,noreferrer");
 });
+</script>
+
+<!-- ===== VISUAL TEXT EDITOR (site-wide) ===== -->
+<style>
+  .ve-mode [data-edit]{outline:1px dashed rgba(10,184,157,.55);outline-offset:3px;border-radius:4px;cursor:text;transition:background-color .15s}
+  .ve-mode [data-edit]:hover{background-color:rgba(10,184,157,.10)}
+  .ve-mode [data-edit]:focus{outline:2px solid #0AB89D;background-color:rgba(10,184,157,.14)}
+  #ve-fab{position:fixed;bottom:20px;left:20px;z-index:99999;background:#0AB89D;color:#fff;border:0;
+    border-radius:999px;padding:14px 22px;font:700 14px Assistant,system-ui,sans-serif;cursor:pointer;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);direction:rtl}
+  #ve-fab.on{background:#161514;border:1px solid #282726}
+  #ve-panel{position:fixed;bottom:78px;left:20px;z-index:99998;width:290px;max-width:calc(100vw - 40px);
+    background:#161514;color:#F0F0F0;border:1px solid #282726;border-radius:14px;
+    box-shadow:0 12px 34px rgba(0,0,0,.45);padding:16px;font:13px Assistant,system-ui,sans-serif;
+    display:none;direction:rtl;text-align:right}
+  #ve-panel.open{display:block}
+  #ve-panel h4{margin:0 0 8px;font-size:15px;font-weight:700;color:#fff}
+  #ve-panel p{margin:0;color:#8D8D8C;line-height:1.5}
+  #ve-count-wrap{margin-top:10px}
+  #ve-count{color:#0AB89D;font-weight:700}
+  #ve-panel button{width:100%;border:0;border-radius:8px;padding:11px;font:700 13px Assistant,system-ui,sans-serif;cursor:pointer;margin-top:8px}
+  #ve-copy{background:#0AB89D;color:#fff}
+  #ve-reset{background:#282726;color:#F0F0F0}
+  #ve-pill{position:fixed;z-index:100000;background:#161514;color:#fff;border:1px solid #0AB89D;border-radius:8px;
+    padding:6px;font:600 12px Assistant,system-ui,sans-serif;display:none;align-items:center;gap:4px;
+    box-shadow:0 8px 20px rgba(0,0,0,.45);direction:rtl}
+  #ve-pill.show{display:flex}
+  #ve-pill-label{padding:0 6px;color:#C0C0BF;white-space:nowrap;max-width:160px;overflow:hidden;text-overflow:ellipsis}
+  #ve-pill button{background:transparent;border:1px solid #282726;border-radius:6px;color:#F0F0F0;cursor:pointer;font:700 12px Assistant,system-ui,sans-serif;padding:5px 8px;white-space:nowrap}
+  #ve-pill button:hover{background:#282726}
+  #ve-pill-bold.active{background:#0AB89D;border-color:#0AB89D;color:#fff}
+  #ve-pill-del{color:#ff8a8a;border-color:#5c2626}
+</style>
+
+<button id="ve-fab" type="button">✎ עריכת טקסט</button>
+<aside id="ve-panel">
+  <h4>עריכת תוכן העמוד</h4>
+  <p>לחצי על כל טקסט עם מסגרת מקווקוות ותקלידי ישירות. אפשר להדגיש (B), למחוק אזור שלם (🗑) או לאפס שדה (↺). השינויים נשמרים בדפדפן הזה ומשותפים לכל עמודי האתר.</p>
+  <div id="ve-count-wrap"><span id="ve-count">0</span> שינויים ממתינים</div>
+  <button id="ve-copy" type="button">📋 העתיקי שינויים לקלוד</button>
+  <button id="ve-reset" type="button">↺ אפסי הכל</button>
+</aside>
+<div id="ve-pill">
+  <span id="ve-pill-label"></span>
+  <button id="ve-pill-bold" type="button" title="הדגשה (בולד)"><b>B</b></button>
+  <button id="ve-pill-del" type="button" title="מחיקת האזור">🗑</button>
+  <button id="ve-pill-reset" type="button" title="איפוס שדה">↺</button>
+</div>
+
+<script>
+(function () {
+  const STORAGE_KEY = "doron-site-edits-v1";
+  const fab = document.getElementById("ve-fab");
+  const panel = document.getElementById("ve-panel");
+  const countEl = document.getElementById("ve-count");
+  const pill = document.getElementById("ve-pill");
+  const pillLabel = document.getElementById("ve-pill-label");
+  const pillBold = document.getElementById("ve-pill-bold");
+  const pillDel = document.getElementById("ve-pill-del");
+  const pillReset = document.getElementById("ve-pill-reset");
+
+  let editMode = false;
+  let focusedId = null;
+  const originals = {}; // id -> original innerHTML
+  let edits = {};
+  try { edits = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch (e) { edits = {}; }
+
+  function blockFor(el) { return el.closest("[data-edit-block]") || el; }
+  function captureOriginals() {
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (!(id in originals)) originals[id] = el.innerHTML;
+    });
+  }
+  function save() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(edits));
+    countEl.textContent = Object.keys(edits).length;
+  }
+  function applyEdits() {
+    // two passes: a block with ANY deleted field must stay hidden even
+    // though its other fields (title vs. description, say) are processed
+    // separately and would otherwise reset display back to visible.
+    const hiddenBlocks = new Set();
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      if (edits[id] && edits[id].deleted) hiddenBlocks.add(blockFor(el));
+    });
+    document.querySelectorAll("[data-edit]").forEach((el) => {
+      const id = el.getAttribute("data-edit");
+      const block = blockFor(el);
+      el.contentEditable = editMode ? "true" : "false"; // covers elements re-rendered after editMode was toggled
+      if (hiddenBlocks.has(block)) { block.style.display = "none"; return; }
+      block.style.display = "";
+      const edit = edits[id];
+      if (edit && typeof edit.html === "string" && document.activeElement !== el && el.innerHTML !== edit.html) {
+        el.innerHTML = edit.html;
+      }
+    });
+  }
+  window.__veApplyEdits = applyEdits;
+  function labelOf(el) { return el.getAttribute("data-edit-label") || el.getAttribute("data-edit"); }
+
+  function positionPill(el) {
+    const r = el.getBoundingClientRect();
+    pill.style.top = Math.max(8, r.top - 46) + "px";
+    let left = Math.min(r.left, window.innerWidth - pill.offsetWidth - 8);
+    pill.style.left = Math.max(8, left) + "px";
+  }
+  function updateBoldState() { try { pillBold.classList.toggle("active", document.queryCommandState("bold")); } catch (e) {} }
+  function showPillFor(el) {
+    focusedId = el.getAttribute("data-edit");
+    pillLabel.textContent = labelOf(el);
+    pill.classList.add("show");
+    positionPill(el);
+    updateBoldState();
+  }
+  function hidePill() { pill.classList.remove("show"); focusedId = null; }
+
+  function setEditMode(on) {
+    editMode = on;
+    document.body.classList.toggle("ve-mode", on);
+    fab.classList.toggle("on", on);
+    fab.textContent = on ? "✓ סיימתי לערוך" : "✎ עריכת טקסט";
+    panel.classList.toggle("open", on);
+    document.querySelectorAll("[data-edit]").forEach((el) => { el.contentEditable = on ? "true" : "false"; });
+    if (!on) hidePill();
+  }
+  fab.addEventListener("click", () => setEditMode(!editMode));
+
+  function recordEdit(el) {
+    const id = el.getAttribute("data-edit");
+    const html = el.innerHTML;
+    if (html === (originals[id] || "")) delete edits[id]; else edits[id] = { html };
+    save();
+  }
+
+  document.addEventListener("focusin", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    showPillFor(el);
+  });
+  document.addEventListener("focusout", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!el) return;
+    recordEdit(el);
+    hidePill();
+  });
+  document.addEventListener("input", (e) => {
+    const el = e.target.closest("[data-edit]");
+    if (!editMode || !el) return;
+    recordEdit(el);
+    const id = el.getAttribute("data-edit");
+    document.querySelectorAll('[data-edit="' + CSS.escape(id) + '"]').forEach((other) => {
+      if (other !== el) other.innerHTML = el.innerHTML;
+    });
+    if (focusedId === id) positionPill(el);
+  });
+  document.addEventListener("keyup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  document.addEventListener("mouseup", (e) => { if (editMode && e.target.closest("[data-edit]")) updateBoldState(); });
+  window.addEventListener("scroll", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); }, true);
+  window.addEventListener("resize", () => { if (focusedId && document.activeElement) positionPill(document.activeElement); });
+
+  pillBold.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    document.execCommand("bold");
+    const el = document.activeElement;
+    if (el && el.hasAttribute("data-edit")) recordEdit(el);
+    updateBoldState();
+  });
+
+  pillDel.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    if (!confirm("למחוק את האזור הזה מהעמוד? אפשר לשחזר עם 'איפוס שדה'.")) return;
+    const el = document.querySelector('[data-edit="' + CSS.escape(focusedId) + '"]');
+    edits[focusedId] = { deleted: true };
+    save();
+    if (el) blockFor(el).style.display = "none";
+    hidePill();
+  });
+
+  pillReset.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    if (!focusedId) return;
+    document.querySelectorAll('[data-edit="' + CSS.escape(focusedId) + '"]').forEach((el) => {
+      el.innerHTML = originals[focusedId] || "";
+      blockFor(el).style.display = "";
+    });
+    delete edits[focusedId];
+    save();
+    hidePill();
+  });
+
+  document.getElementById("ve-reset").addEventListener("click", () => {
+    if (!confirm("לאפס את כל השינויים בכל עמודי האתר? הפעולה לא הפיכה.")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  });
+
+  function htmlToReadable(html) {
+    const d = document.createElement("div");
+    d.innerHTML = html;
+    d.querySelectorAll("b, strong").forEach((b) => { b.replaceWith("**" + b.textContent + "**"); });
+    return d.textContent.trim();
+  }
+
+  document.getElementById("ve-copy").addEventListener("click", async () => {
+    const ids = Object.keys(edits);
+    let text;
+    if (!ids.length) {
+      text = "לא בוצעו שינויים עדיין בעורך.";
+    } else {
+      const lines = ids.map((id) => {
+        const el = document.querySelector('[data-edit="' + CSS.escape(id) + '"]');
+        const label = el ? labelOf(el) : id;
+        if (edits[id].deleted) return "- [" + id + "] " + label + ": למחוק את האזור הזה מהאתר.";
+        return "- [" + id + "] " + label + ':\n  לפני: "' + htmlToReadable(originals[id] || "") + '"\n  אחרי: "' + htmlToReadable(edits[id].html) + '"';
+      });
+      text =
+        "עדכני בבקשה את תוכן האתר (site.ts, וגם קבצי preview הרלוונטיים) לפי השינויים הבאים שערכתי בעורך הוויזואלי באתר:\n\n" +
+        lines.join("\n\n") +
+        "\n\nעדכני בכל המקומות הרלוונטיים (site.ts + preview/*.html + הרכיבים ב-React אם צריך) ושמרי על עיצוב זהה. **בולד** מתייחס להדגשת טקסט. אל תעלי ל-Lovable בלי אישור.";
+    }
+    try { await navigator.clipboard.writeText(text); } catch (e) { window.prompt("העתיקי ידנית:", text); }
+    const b = document.getElementById("ve-copy");
+    const old = b.textContent;
+    b.textContent = "✓ הועתק! הדביקי לקלוד בצ'אט";
+    setTimeout(() => { b.textContent = old; }, 2500);
+  });
+
+  captureOriginals();
+  applyEdits();
+  save();
+})();
 </script>
 </body>
 </html>
