@@ -3,6 +3,8 @@ import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { PlotsHero } from "@/components/site/PlotsHero";
 import { PlotsListings } from "@/components/site/PlotsListings";
+import { ProcessSlider } from "@/components/site/ProcessSlider";
+import { plotsPage } from "@/data/site";
 
 const Plots = () => {
   return (
@@ -10,6 +12,7 @@ const Plots = () => {
       <Navbar current="/plots" />
       <main>
         <PlotsHero />
+        <ProcessSlider {...plotsPage.process} />
         <PlotsListings />
         <CtaBanner />
       </main>

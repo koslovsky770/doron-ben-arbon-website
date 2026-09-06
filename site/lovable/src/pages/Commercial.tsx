@@ -3,6 +3,8 @@ import { CommercialListings } from "@/components/site/CommercialListings";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
+import { ProcessSlider } from "@/components/site/ProcessSlider";
+import { commercialPage } from "@/data/site";
 
 const Commercial = () => {
   return (
@@ -10,6 +12,7 @@ const Commercial = () => {
       <Navbar current="/commercial" />
       <main>
         <CommercialHero />
+        <ProcessSlider {...commercialPage.process} />
         <CommercialListings />
         <CtaBanner />
       </main>
