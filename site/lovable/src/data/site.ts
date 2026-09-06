@@ -232,6 +232,7 @@ export const projects = [
     tags: ["550 מ״ר", "שטח מסחרי"],
     // TODO placeholder — אין תצלום של העסקה הזו בפרוספקט
     image: "/images/proj-hadad.jpg",
+    gallery: [] as string[],
   },
   {
     id: "glory",
@@ -241,8 +242,9 @@ export const projects = [
       "מחסנים ומשרדים ליבואן פעיל — שילוב של שטח אחסון נוח וקומת משרדים צמודה.",
     location: "רח׳ הקישון, בני ברק",
     tags: ["300 מ״ר", "מחסנים ומשרדים"],
-    // TODO placeholder — אין תצלום של העסקה הזו בפרוספקט
+    // תצלומים אמיתיים שסיפק דורון (site/תמונות/glory1-3)
     image: "/images/proj-glory.jpg",
+    gallery: ["/images/proj-glory-2.jpg", "/images/proj-glory-3.jpg"],
   },
   {
     id: "mishkan",
@@ -252,8 +254,9 @@ export const projects = [
       "השכרת ארבע חנויות ברחבי בני ברק לרשת אחת, בהתאמה מדויקת של מיקום וקהל לכל סניף.",
     location: "ברחבי בני ברק",
     tags: ["4 חנויות", "רשת קמעונאית"],
-    // תצלום אמיתי מהפרוספקט — חזית הסניף
+    // תצלומים אמיתיים שסיפק דורון (site/תמונות/mishkan1-3) — מחליפים את התצלום הבודד הקודם
     image: "/images/proj-mishkan.jpg",
+    gallery: ["/images/proj-mishkan-2.jpg", "/images/proj-mishkan-3.jpg"],
   },
   {
     id: "akiva-101",
@@ -265,6 +268,7 @@ export const projects = [
     tags: ["מגורים ומסחר", "אוכלס במלואו"],
     // תצלום אמיתי מהפרוספקט — הבניין בפינת רבי עקיבא–סוקולוב
     image: "/images/proj-akiva101.jpg",
+    gallery: [] as string[],
   },
   {
     id: "akiva-34",
@@ -276,6 +280,7 @@ export const projects = [
     tags: ["2,000 מ״ר", "מסחר ומשרדים"],
     // TODO placeholder — אין תצלום של העסקה הזו בפרוספקט
     image: "/images/proj-akiva34.jpg",
+    gallery: [] as string[],
   },
   {
     id: "hazon-ish-12",
@@ -287,6 +292,7 @@ export const projects = [
     tags: ["900 מ״ר", "מבנה ציבור"],
     // תצלום אמיתי מהפרוספקט — הבניין עם שילוט בית הספר 'מעלות'
     image: "/images/proj-hazon12.jpg",
+    gallery: [] as string[],
   },
 ];
 

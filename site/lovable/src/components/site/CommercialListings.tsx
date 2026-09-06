@@ -40,14 +40,39 @@ export function CommercialListings() {
               <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">
                 {project.description}
               </p>
-              <div className="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] lg:h-[372px]">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+              {project.gallery.length > 0 ? (
+                <div className="flex h-[240px] gap-3 sm:h-[320px] lg:h-[372px]">
+                  <div className="h-full flex-[2] overflow-hidden rounded-2xl">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-3">
+                    {project.gallery.map((src) => (
+                      <div key={src} className="flex-1 overflow-hidden rounded-2xl">
+                        <img
+                          src={src}
+                          alt={`${project.title} — תמונה נוספת`}
+                          className="h-full w-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] lg:h-[372px]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              )}
             </article>
           ))}
         </div>
