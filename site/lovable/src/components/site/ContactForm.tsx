@@ -16,9 +16,12 @@ export function ContactForm() {
   const [email, setEmail] = useState("");
   const [interest, setInterest] = useState(form.interestOptions[0].value);
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  // מוחלף בקריאה ל-Resend דרך site/preview/api/send-contact.php כשהאתר
+  // רץ על שרת עם PHP (cPanel). כל עוד אין endpoint פעיל (למשל ב-GitHub
+  // Pages, שלא מריץ PHP) הבקשה נכשלת בשקט והטופס נופל חזרה לפתיחת וואטסאפ.
+  const openWhatsappFallback = () => {
     const interestLabel =
       form.interestOptions.find((option) => option.value === interest)?.label ?? interest;
 
@@ -33,6 +36,29 @@ export function ContactForm() {
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
     window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const interestLabel =
+      form.interestOptions.find((option) => option.value === interest)?.label ?? interest;
+
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/send-contact.php", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ name, phone, email, interest: interestLabel, message }),
+      });
+      // A static host with no PHP (e.g. GitHub Pages) still answers 200 with
+      // the raw file — only a real { ok: true } JSON body counts as success.
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data || data.ok !== true) throw new Error("send failed");
+      setStatus("sent");
+    } catch {
+      setStatus("idle");
+      openWhatsappFallback();
+    }
   };
 
   return (
@@ -107,10 +133,11 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="relative inline-flex items-center gap-2.5 self-start rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 btn-inner-brand"
+        disabled={status === "sending"}
+        className="relative inline-flex items-center gap-2.5 self-start rounded-lg bg-brand px-6 py-4 text-base font-bold text-white transition-transform duration-200 hover:-translate-y-0.5 btn-inner-brand disabled:opacity-60"
       >
         <MessageCircle className="h-[18px] w-[18px]" aria-hidden />
-        {form.submitLabel}
+        {status === "sending" ? "שולח…" : status === "sent" ? "נשלח, תודה!" : form.submitLabel}
       </button>
     </form>
   );
