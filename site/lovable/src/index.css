@@ -118,4 +118,29 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* subtle recurring light sweep — used on the WhatsApp button in the hero */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 42%, hsl(var(--brand) / 0.35) 50%, transparent 58%);
+    transform: translateX(-120%) skewX(-20deg);
+    animation: btn-shine-sweep 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes btn-shine-sweep {
+  0%,
+  55% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(120%) skewX(-20deg);
+  }
 }

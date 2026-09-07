@@ -125,8 +125,8 @@ tailwind.config = {
 
   <div class="relative mx-auto max-w-[1440px] px-4 pb-14 pt-12 sm:px-8 lg:px-16 lg:pb-[66px] lg:pt-24">
     <div class="flex flex-col items-start gap-6 lg:flex-row lg:items-end lg:justify-between">
-      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="plotsPage.hero.title" data-edit-label="כותרת ראשית (הירו)">מגרשים<br />לבנייה ולהשקעה בבני ברק.</h1>
-      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.hero.paragraph" data-edit-label="פסקת הירו">איתור ותיווך מגרשים לבנייה ולהשקעה, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות למודעות. (טקסט לדוגמה — יעודכן מול דורון.)</p>
+      <h1 class="font-display text-h3 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="plotsPage.hero.title" data-edit-label="כותרת ראשית (הירו)">מגרשים לבניה<br />לקבלנים ויזמים.</h1>
+      <p class="max-w-[707px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.hero.paragraph" data-edit-label="פסקת הירו">איתור ותיווך מגרשים לבנייה עבור קבלנים ויזמים בבני ברק, עם היכרות מלאה עם השטח והזדמנויות שלא מגיעות לעולם למודעות.</p>
     </div>
 
     <div class="mt-8 h-[220px] w-full overflow-hidden rounded-2xl sm:h-[360px] lg:mt-[66px] lg:h-[639px]">
@@ -165,12 +165,12 @@ tailwind.config = {
 <section class="relative z-10 bg-ink-13">
   <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-4 py-16 sm:px-8 lg:flex-row lg:gap-[120px] lg:px-16 lg:py-[88px]">
     <div class="flex flex-col items-start gap-6 lg:w-[360px] lg:shrink-0">
-      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="plotsPage.listings.title" data-edit-label="כותרת בצד">מגרשים<br />להשקעה</h2>
+      <h2 class="font-display text-d2 font-bold leading-[1.05] tracking-tight text-ink-2" data-edit="plotsPage.listings.title" data-edit-label="כותרת בצד">מגרשים<br />לבנייה</h2>
       <a href="#" data-wa class="btn-inner-brand relative flex w-full items-center justify-center rounded-lg bg-brand px-6 py-5 text-lg font-bold text-white" data-edit="plotsPage.listings.cta.label" data-edit-label="כפתור וואטסאפ (צד)">דברו איתי בוואטסאפ</a>
     </div>
 
     <div class="flex flex-1 flex-col gap-10 lg:gap-14">
-      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.listings.paragraph" data-edit-label="פסקת פתיחה">עדיין לא עלו לכאן עסקאות מגרשים אמיתיות. שלושת הבלוקים למטה הם תוכן דמה זמני להדגמת המבנה, ויוחלפו בעסקאות אמיתיות ברגע שיתקבלו מדורון.</p>
+      <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.listings.paragraph" data-edit-label="פסקת פתיחה">רוב המגרשים שמגיעים אליי לא מתפרסמים בשום מקום. בזכות היכרות מעמיקה עם השוק ועם האנשים בבני ברק, ובזכות שם טוב שנבנה לאורך שנים, אני נחשף למגרשים שאחרים פשוט לא יודעים עליהם - בעיקר מגרשים שעברו בירושה, או מצבים שבהם הבעלים תקועים ומחפשים פתרון אמין ומהיר.</p>
 
       <div id="listings-track" class="flex flex-col gap-10 lg:gap-14"></div>
     </div>
@@ -368,16 +368,15 @@ processTrack.addEventListener("pointermove", e => {
 }));
 
 const PLACEHOLDER = [
-  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." },
-  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." },
-  { t:"מגרש לדוגמה — שם ומיקום", d:"טקסט תיאור לדוגמה: גודל המגרש, ייעוד (מגורים / מסחר / תעשייה) ומצב תכנוני. יוחלף בפרטי עסקה אמיתית." }
+  { t:"מגרש במרכז העיר - חצי דונם לבניה רוויה של 21 דירות", d:"מגרש בשטח של כחצי דונם במרכז בני ברק, בייעוד לבניה רוויה עם זכויות בנייה ל־21 דירות. התמונה היא הדמיה להמחשה בלבד.", i:"plot-21units.jpg" }
 ];
+const IMG_PLOTS = "../lovable/public/images/";
 document.getElementById("listings-track").innerHTML = PLACEHOLDER.map((p, i) => `
   <article class="flex flex-col gap-4" data-edit-block>
-    <h3 class="font-display text-h6 font-bold leading-none text-ink-2" data-edit="plotsPage.listings.placeholder.${i}.title" data-edit-label="כותרת מגרש (דמה)">${p.t}</h3>
-    <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.listings.placeholder.${i}.description" data-edit-label="תיאור מגרש (דמה)">${p.d}</p>
-    <div class="flex h-[240px] w-full items-center justify-center rounded-2xl border border-dashed border-ink-10 bg-ink-12 sm:h-[320px] lg:h-[372px]">
-      <span class="text-sm text-ink-7">תמונה תתווסף בהמשך</span>
+    <h3 class="font-display text-h6 font-bold leading-none text-ink-2" data-edit="plotsPage.listings.placeholder.${i}.title" data-edit-label="כותרת מגרש">${p.t}</h3>
+    <p class="text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="plotsPage.listings.placeholder.${i}.description" data-edit-label="תיאור מגרש">${p.d}</p>
+    <div class="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] lg:h-[372px]">
+      <img src="${IMG_PLOTS}${p.i}" alt="${p.t}" class="h-full w-full object-cover" loading="lazy" />
     </div>
   </article>`).join("");
 </script>

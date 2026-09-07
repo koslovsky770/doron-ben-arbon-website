@@ -180,6 +180,27 @@ tailwind.config = {
     </form>
   </div>
 </section>
+
+<!-- ============ MAP ============ -->
+<section class="relative z-10 pb-20 lg:pb-[88px]">
+  <div class="mx-auto max-w-[900px] px-4 sm:px-8 lg:px-16">
+    <div class="flex flex-col gap-6 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:p-8">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <h2 class="font-display text-d3 font-bold text-ink-2 flex items-center gap-2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 shrink-0 text-brand" aria-hidden><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          איפה נמצא המשרד
+        </h2>
+        <a href="https://waze.com/ul?q=%D7%A8%D7%91%D7%99%20%D7%A2%D7%A7%D7%99%D7%91%D7%90%20101%2C%20%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn-inner-dark relative inline-flex items-center gap-2 rounded-lg bg-ink-11 px-5 py-3 text-sm font-bold text-brand transition-colors hover:bg-ink-10">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          נווטו בוויז ←
+        </a>
+      </div>
+      <div class="overflow-hidden rounded-xl border border-ink-10">
+        <iframe src="https://maps.google.com/maps?q=%D7%A8%D7%91%D7%99%20%D7%A2%D7%A7%D7%99%D7%91%D7%90%20101%2C%20%D7%91%D7%A0%D7%99%20%D7%91%D7%A8%D7%A7&z=16&output=embed" class="h-[320px] w-full" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="איפה נמצא המשרד"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <!-- ============ FOOTER ============ -->

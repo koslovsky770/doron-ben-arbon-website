@@ -36,9 +36,20 @@ export function PlotsListings() {
                 {plot.title}
               </h3>
               <p className="text-[17px] leading-[1.6] text-ink-6 sm:text-lg">{plot.description}</p>
-              <div className="flex h-[240px] w-full items-center justify-center rounded-2xl border border-dashed border-ink-10 bg-ink-12 sm:h-[320px] lg:h-[372px]">
-                <span className="text-sm text-ink-7">תמונה תתווסף בהמשך</span>
-              </div>
+              {"image" in plot && plot.image ? (
+                <div className="h-[240px] w-full overflow-hidden rounded-2xl sm:h-[320px] lg:h-[372px]">
+                  <img
+                    src={plot.image}
+                    alt={plot.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-[240px] w-full items-center justify-center rounded-2xl border border-dashed border-ink-10 bg-ink-12 sm:h-[320px] lg:h-[372px]">
+                  <span className="text-sm text-ink-7">תמונה תתווסף בהמשך</span>
+                </div>
+              )}
             </article>
           ))}
         </div>

@@ -111,7 +111,7 @@ export function Hero() {
               href={hero.secondaryCta.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-medium text-ink-4 transition-colors hover:bg-ink-10 btn-inner-dark"
+              className="relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-bold text-brand transition-colors hover:bg-ink-10 btn-inner-dark btn-shine"
             >
               <MessageCircle className="h-[18px] w-[18px]" aria-hidden />
               {hero.secondaryCta.label}

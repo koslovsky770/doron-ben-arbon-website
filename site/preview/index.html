@@ -61,6 +61,19 @@ tailwind.config = {
   .line-clamp-2-safe { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
   .no-bar { scrollbar-width: none; }
   .no-bar::-webkit-scrollbar { display: none; }
+  /* subtle recurring light sweep — used on the WhatsApp button in the hero */
+  .btn-shine { position: relative; overflow: hidden; }
+  .btn-shine::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(115deg, transparent 42%, hsl(171 90% 38% / .35) 50%, transparent 58%);
+    transform: translateX(-120%) skewX(-20deg);
+    animation: btn-shine-sweep 3.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes btn-shine-sweep {
+    0%, 55% { transform: translateX(-120%) skewX(-20deg); }
+    100% { transform: translateX(120%) skewX(-20deg); }
+  }
 </style>
 </head>
 <body class="min-h-[100dvh] w-full overflow-x-clip bg-ink-13">
@@ -160,7 +173,7 @@ tailwind.config = {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span data-edit="hero.primaryCta.label" data-edit-label="כפתור התקשרות">התקשרו עכשיו</span>
         </a>
-        <a href="#" data-wa class="btn-inner-dark relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-medium text-ink-4 transition-colors hover:bg-ink-10">
+        <a href="#" data-wa class="btn-inner-dark btn-shine relative flex h-[59px] items-center justify-center gap-2.5 rounded-lg bg-ink-11 px-7 text-base font-bold text-brand transition-colors hover:bg-ink-10">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
           <span data-edit="hero.secondaryCta.label" data-edit-label="כפתור וואטסאפ">וואטסאפ</span>
         </a>
@@ -200,7 +213,7 @@ tailwind.config = {
   <div class="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-16">
     <div class="mx-auto max-w-[1000px] text-center">
       <div class="flex items-center justify-center gap-5">
-        <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="servicesSection.title" data-edit-label="כותרת - תיווך מסחרי חשיבה יזמית">תיווך מסחרי - חשיבה יזמית</h2>
+        <h2 class="font-display text-d2 font-extrabold tracking-tight text-ink-2" data-edit="servicesSection.title" data-edit-label="כותרת - תיווך מסחרי חשיבה יזמית">יזמות נדל״ן בבני ברק</h2>
         <svg viewBox="0 0 100 100" fill="none" class="h-[38px] w-[38px] shrink-0 text-brand" aria-hidden><path d="M62.6 18.6A34 34 0 1 0 78.9 32.2" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M71 31 L79.5 24 L86 33.5" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <p class="mx-auto mt-6 max-w-[674px] text-[17px] leading-[1.6] text-ink-6 sm:text-lg" data-edit="servicesSection.paragraph" data-edit-label="פסקת השירות שתקבלו">אנחנו מלווים בעלי עסקים ויזמים בדרך לנכס הנכון, מתוך אחריות אמיתית לתוצאה. בוחנים התאמה, שומרים על האינטרסים שלכם ומנהלים את התהליך מתוך הבנה מסחרית עמוקה וניסיון של שנים.</p>
@@ -438,7 +451,8 @@ const PROJECTS = [
   { id:"mishkan", c:"commercial", t:"משכן התכלת", d:"השכרת ארבע חנויות ברחבי בני ברק לרשת אחת, בהתאמה מדויקת של מיקום וקהל לכל סניף.", l:"ברחבי בני ברק", g:["4 חנויות","רשת קמעונאית"], i:"proj-mishkan.jpg" },
   { id:"akiva-101", c:"project-marketing", t:"רבי עקיבא 101", d:"שיווק ואכלוס בניין מגורים וחנויות חדש בלב הפועם של בני ברק, על ציר רבי עקיבא–סוקולוב. שווק בהצלחה.", l:"רבי עקיבא 101, בני ברק", g:["מגורים ומסחר","אוכלס במלואו"], i:"proj-akiva101.jpg" },
   { id:"akiva-34", c:"project-marketing", t:"רבי עקיבא 34", d:"שיווק כ־2,000 מ״ר שטחי מסחר ומשרדים. הפרויקט שווק לעיריית בני ברק, ובאזור שווקו משרדים גם לחברות מובילות.", l:"רבי עקיבא 34, בני ברק", g:["2,000 מ״ר","מסחר ומשרדים"], i:"proj-akiva34.jpg" },
-  { id:"hazon-ish-12", c:"project-marketing", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", l:"חזון איש 12, בני ברק", g:["900 מ״ר","מבנה ציבור"], i:"proj-hazon12.jpg" }
+  { id:"hazon-ish-12", c:"project-marketing", t:"חזון איש 12", d:"שיווק מבנה של כ־900 מ״ר ששימש בעבר כבית אבות, והותאם לבית ספר לחינוך מיוחד.", l:"חזון איש 12, בני ברק", g:["900 מ״ר","מבנה ציבור"], i:"proj-hazon12.jpg" },
+  { id:"shikun-gimel-tama38", c:"project-marketing", t:"ליווי דיירים - תמ״א 38", d:"ליווי דיירים לקראת תמ״א 38/2 בשיכון ג׳ ובמערב העיר - ליווי מקצועי מול הקבלן לאורך כל הדרך, כולל טיפול בכל הבעיות שמסביב, מהארגון הראשוני של הדיירים ועד לחתימה.", l:"שיכון ג׳ ומערב העיר, בני ברק", g:["תמ״א 38","ליווי דיירים"], i:"proj-tama38.jpg" }
 ];
 const FILTERS = [["all","הכל"],["commercial","תיווך מסחרי"],["project-marketing","שיווק פרויקטים"],["plots","מגרשים"]];
 const SERVICES = [

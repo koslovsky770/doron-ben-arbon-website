@@ -1,3 +1,4 @@
+import { MapPin, Navigation } from "lucide-react";
 import { RoundArrowMark } from "@/components/site/Icons";
 import { ConsentBanner } from "@/components/site/ConsentBanner";
 import { ContactForm } from "@/components/site/ContactForm";
@@ -27,6 +28,38 @@ const Contact = () => {
         <section className="relative z-10 pb-20 lg:pb-[88px]">
           <div className="mx-auto max-w-[900px] px-4 sm:px-8 lg:px-16">
             <ContactForm />
+          </div>
+        </section>
+
+        <section className="relative z-10 pb-20 lg:pb-[88px]">
+          <div className="mx-auto max-w-[900px] px-4 sm:px-8 lg:px-16">
+            <div className="flex flex-col gap-6 rounded-2xl border border-ink-10 bg-ink-13 p-6 sm:p-8">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <h2 className="flex items-center gap-2 font-display text-d3 font-bold text-ink-2">
+                  <MapPin className="h-5 w-5 shrink-0 text-brand" aria-hidden />
+                  {contactPage.map.title}
+                </h2>
+                <a
+                  href={contactPage.map.wazeHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center gap-2 rounded-lg bg-ink-11 px-5 py-3 text-sm font-bold text-brand transition-colors hover:bg-ink-10 btn-inner-dark"
+                >
+                  <Navigation className="h-4 w-4" aria-hidden />
+                  {contactPage.map.wazeLabel}
+                </a>
+              </div>
+              <div className="overflow-hidden rounded-xl border border-ink-10">
+                <iframe
+                  src={contactPage.map.embedSrc}
+                  className="h-[320px] w-full"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={contactPage.map.title}
+                />
+              </div>
+            </div>
           </div>
         </section>
       </main>
