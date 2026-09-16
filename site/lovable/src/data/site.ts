@@ -312,7 +312,7 @@ export const projects = [
     category: "commercial" as ProjectCategory,
     title: "האחים חדד – כלי כסף",
     description:
-      "השכרת שטח מסחרי גדול לרשת כלי כסף מובילה, כולל התאמת השטח לצורכי התצוגה והמכירה.",
+      "השכרת משרדים ומפעל 550 מטר לאחים חדד.",
     location: "רח׳ הקישון, בני ברק",
     tags: ["550 מ״ר", "שטח מסחרי"],
     // TODO placeholder — אין תצלום של העסקה הזו בפרוספקט
